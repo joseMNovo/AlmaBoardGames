@@ -154,7 +154,7 @@ footer p {
 
 @media (max-width: 360px) {
     .logo {
-        width: 330px;
+        width: 300px;
         margin-bottom: 20px;
     }
 
@@ -183,7 +183,7 @@ footer p {
 
 @media (max-width: 320px) {
     .logo {
-        width: 290px;
+        width: 250px;
         margin-bottom: 20px;
     }
 
