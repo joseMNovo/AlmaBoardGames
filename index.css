@@ -124,7 +124,7 @@ footer p {
     }
 
     .logo {
-        width: 430px;
+        width: 300px;
         margin-bottom: 25px;
     }
 
@@ -149,6 +149,37 @@ footer p {
     footer p {
         padding: 6px 10px;
         border-radius: 12px;
+    }
+}
+
+/* Intermedio */
+@media (max-width: 420px) {
+    .logo {
+        width: 300px;
+        margin-bottom: 22px;
+    }
+
+    .title {
+        font-size: 1.65rem;
+        margin-bottom: 32px;
+    }
+
+    .game-btn {
+        padding: 11px 22px;
+        font-size: 0.95rem;
+        min-width: 190px;
+        min-height: 46px;
+    }
+
+    footer {
+        bottom: 9px;
+        right: 9px;
+        font-size: 0.72rem;
+    }
+
+    footer p {
+        padding: 5.5px 9px;
+        border-radius: 11px;
     }
 }
 
