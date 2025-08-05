@@ -13,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    position: relative;
 }
 
 .container {
@@ -72,6 +73,26 @@ body {
     transform: translateY(-1px);
 }
 
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #004F66;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+footer p {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo {
@@ -88,6 +109,12 @@ body {
         padding: 15px 30px;
         font-size: 1.1rem;
         min-width: 220px;
+    }
+
+    footer {
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.8rem;
     }
 }
 
@@ -112,6 +139,17 @@ body {
         min-width: 200px;
         min-height: 50px;
     }
+
+    footer {
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.75rem;
+    }
+
+    footer p {
+        padding: 6px 10px;
+        border-radius: 12px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -130,6 +168,17 @@ body {
         font-size: 0.9rem;
         min-width: 180px;
     }
+
+    footer {
+        bottom: 8px;
+        right: 8px;
+        font-size: 0.7rem;
+    }
+
+    footer p {
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -141,5 +190,16 @@ body {
     .title {
         font-size: 1.3rem;
         margin-bottom: 20px;
+    }
+
+    footer {
+        bottom: 5px;
+        right: 5px;
+        font-size: 0.65rem;
+    }
+
+    footer p {
+        padding: 4px 6px;
+        border-radius: 8px;
     }
 }
