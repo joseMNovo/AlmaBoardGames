@@ -85,7 +85,8 @@ function checkMatch() {
         document.getElementById('pairs-found').textContent = matchedPairs;
         
         // Check for victory
-        if (matchedPairs === currentSize * currentSize / 2) {
+        const totalPairs = Math.floor(currentSize * currentSize / 2);
+        if (matchedPairs === totalPairs) {
             setTimeout(() => {
                 showVictoryMessage();
             }, 500);
