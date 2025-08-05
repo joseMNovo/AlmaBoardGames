@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    color: #00695c;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.size-btn {
+    background: #4dd0e1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(77, 208, 225, 0.3);
+}
+
+.size-btn:hover {
+    background: #26c6da;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(77, 208, 225, 0.4);
+}
+
+.size-btn.active {
+    background: #00acc1;
+    transform: scale(1.05);
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-label {
+    color: #00695c;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    color: #4dd0e1;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.game-board.size-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.game-board.size-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board.size-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-front {
+    background: #4dd0e1;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TvvIMdif4B6IuvwbJ60D7xvheoC1jA.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00695c;
+}
+
+.card.matched .card-back {
+    background: #4caf50;
+    color: white;
+}
+
+.card.matched {
+    cursor: default;
+}
+
+.reset-btn {
+    margin-top: 30px;
+    background: #ff7043;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 112, 67, 0.3);
+}
+
+.reset-btn:hover {
+    background: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 112, 67, 0.4);
+}
+
+.victory-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+.victory-message.show {
+    display: block;
+    animation: victoryPop 0.5s ease-out;
+}
+
+@keyframes victoryPop {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.victory-title {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.victory-stats {
+    color: #00695c;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .game-board {
+        gap: 10px;
+        padding: 15px;
+    }
+} 
