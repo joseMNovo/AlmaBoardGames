@@ -3,49 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de la memoria</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Alma - Juegos Educativos</title>
+    <link rel="stylesheet" href="index.css">
 
 </head>
 <body>
-    <div class="header">
-        <!-- <img src="img/logo-alma-1.png" alt="Logo" class="logo"> -->
+    <div class="container">
+        <img src="img/logo-alma-1.png" alt="Logo Alma" class="logo">
         
-        <h1 class="title">🧠 Juego de la memoria</h1>
+        <!-- <h1 class="title">Juegos Educativos</h1> -->
         
-        <div class="controls">
-            <button class="size-btn" data-size="3">3x3 (9 cartas)</button>
-            <button class="size-btn active" data-size="4">4x4 (16 cartas)</button>
-            <button class="size-btn" data-size="5">5x5 (25 cartas)</button>
-        </div>
+        <div class="buttons">
+            <a href="memory_board/memory_board.html" class="game-btn">
+                🧠 Juego de la memoria
+            </a>
 
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-label">Pares encontrados</div>
-                <div class="stat-value" id="pairs-found">0</div>
-            </div>
-            <div class="stat">
-                <div class="stat-label">Intentos</div>
-                <div class="stat-value" id="attempts">0</div>
-            </div>
-            <div class="stat">
-                <div class="stat-label">Total pares</div>
-                <div class="stat-value" id="total-pairs">4</div>
-            </div>
+            <a href="word_search/word_search.html" class="game-btn">
+                🔍 Sopa de letras
+            </a>
         </div>
     </div>
-
-    <div class="game-board size-3" id="game-board"></div>
-
-    <button class="reset-btn" onclick="resetGame()">Nuevo juego</button>
-
-    <div class="victory-message" id="victory-message">
-        <div class="victory-title">🎉 ¡Felicitaciones!</div>
-        <div class="victory-stats" id="victory-stats"></div>
-        <button class="size-btn" onclick="hideVictoryMessage()">Continuar</button>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

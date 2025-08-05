@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la memoria</title>
+    <link rel="stylesheet" href="memory_board.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+        <!-- <img src="img/logo-alma-1.png" alt="Logo" class="logo"> -->
+        
+        <h1 class="title">🧠 Juego de la memoria</h1>
+        
+        <div class="controls">
+            <button class="size-btn" data-size="3">Facil</button>
+            <button class="size-btn active" data-size="4">Medio</button>
+            <button class="size-btn" data-size="5">Dificil</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Pares encontrados</div>
+                <div class="stat-value" id="pairs-found">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Intentos</div>
+                <div class="stat-value" id="attempts">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Total pares</div>
+                <div class="stat-value" id="total-pairs">4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-board size-3" id="game-board"></div>
+    
+    <div class="bottom-buttons" style="display: flex; gap: 12px; justify-content: center; margin-top: 18px;">
+        <button class="reset-btn" onclick="window.location.href='../index.html'">← Volver</button>
+        <button class="reset-btn" onclick="resetGame()">Volver a jugar</button>
+    </div>
+
+    <div class="victory-message" id="victory-message">
+        <div class="victory-title">🎉 ¡Felicitaciones!</div>
+        <div class="victory-stats" id="victory-stats"></div>
+        <button class="size-btn" onclick="hideVictoryMessage()">Continuar</button>
+    </div>
+
+    <script src="memory_board.js"></script>
+</body>
+</html>
