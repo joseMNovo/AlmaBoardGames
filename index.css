@@ -131,3 +131,15 @@ body {
         min-width: 180px;
     }
 }
+
+@media (max-width: 320px) {
+    .logo {
+        width: 290px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+}
