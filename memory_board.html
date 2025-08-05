@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Memoria</title>
+    <title>Juego de la memoria</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="header">
-        <h1 class="title">🧠 Juego de Memoria</h1>
+        <!-- <img src="img/logo-alma-1.png" alt="Logo" class="logo"> -->
+        
+        <h1 class="title">🧠 Juego de la memoria</h1>
         
         <div class="controls">
-            <button class="size-btn active" data-size="3">3x3 (9 cartas)</button>
-            <button class="size-btn" data-size="4">4x4 (16 cartas)</button>
+            <button class="size-btn" data-size="3">3x3 (9 cartas)</button>
+            <button class="size-btn active" data-size="4">4x4 (16 cartas)</button>
             <button class="size-btn" data-size="5">5x5 (25 cartas)</button>
         </div>
 
         <div class="stats">
             <div class="stat">
-                <div class="stat-label">Pares Encontrados</div>
+                <div class="stat-label">Pares encontrados</div>
                 <div class="stat-value" id="pairs-found">0</div>
             </div>
             <div class="stat">
@@ -26,7 +30,7 @@
                 <div class="stat-value" id="attempts">0</div>
             </div>
             <div class="stat">
-                <div class="stat-label">Total Pares</div>
+                <div class="stat-label">Total pares</div>
                 <div class="stat-value" id="total-pairs">4</div>
             </div>
         </div>
@@ -34,7 +38,7 @@
 
     <div class="game-board size-3" id="game-board"></div>
 
-    <button class="reset-btn" onclick="resetGame()">🔄 Nuevo Juego</button>
+    <button class="reset-btn" onclick="resetGame()">Nuevo juego</button>
 
     <div class="victory-message" id="victory-message">
         <div class="victory-title">🎉 ¡Felicitaciones!</div>

@@ -1,3 +1,18 @@
+/* Paleta aplicada */
+:root {
+    --principal-celeste: #5EC0CF;
+    --principal-violeta: #9A8BC2;
+    --principal-blanco: #F4F4F4;
+
+    --secundario-oscuro: #004F66;
+    --secundario-rosa: #C8A2C9;
+    --secundario-gris: #4D4D4D;
+    --secundario-lila: #E8E6FB;
+    --accent-naranja: #ff7043;
+    --accent-naranja-hover: #ff5722;
+    --verde-match: #4caf50;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +20,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
     min-height: 100vh;
     display: flex;
@@ -17,10 +32,12 @@ body {
 .header {
     text-align: center;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .title {
-    color: #00695c;
+    color: var(--secundario-oscuro);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -36,7 +53,7 @@ body {
 }
 
 .size-btn {
-    background: #4dd0e1;
+    background: var(--principal-celeste);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -45,17 +62,18 @@ body {
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(77, 208, 225, 0.3);
+    box-shadow: 0 4px 15px rgba(94, 192, 207, 0.3);
+    min-height: 44px; /* Touch-friendly minimum size */
 }
 
 .size-btn:hover {
-    background: #26c6da;
+    background: #4AA8B6;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(77, 208, 225, 0.4);
+    box-shadow: 0 6px 20px rgba(94, 192, 207, 0.4);
 }
 
 .size-btn.active {
-    background: #00acc1;
+    background: var(--secundario-oscuro);
     transform: scale(1.05);
 }
 
@@ -68,7 +86,7 @@ body {
 }
 
 .stat {
-    background: white;
+    background: var(--principal-blanco);
     padding: 15px 25px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -77,14 +95,14 @@ body {
 }
 
 .stat-label {
-    color: #00695c;
+    color: var(--secundario-oscuro);
     font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .stat-value {
-    color: #4dd0e1;
+    color: var(--principal-celeste);
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -97,6 +115,8 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .game-board.size-3 {
@@ -117,6 +137,14 @@ body {
     position: relative;
     cursor: pointer;
     perspective: 1000px;
+    transition: transform 0.18s cubic-bezier(.4,1.3,.6,1), box-shadow 0.18s cubic-bezier(.4,1.3,.6,1);
+    touch-action: manipulation; /* Better touch handling */
+}
+
+.card:hover:not(.flipped):not(.matched) {
+    transform: scale(1.01) translateY(-1px);
+    box-shadow: 0 8px 24px rgba(94, 192, 207, 0.25);
+    z-index: 2;
 }
 
 .card-inner {
@@ -145,8 +173,8 @@ body {
 }
 
 .card-front {
-    background: #4dd0e1;
-    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TvvIMdif4B6IuvwbJ60D7xvheoC1jA.png');
+    background: var(--principal-celeste);
+    background-image: url('img/flor-blanco.png');
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -157,11 +185,11 @@ body {
     transform: rotateY(180deg);
     font-size: 1.5rem;
     font-weight: bold;
-    color: #00695c;
+    color: var(--secundario-oscuro);
 }
 
 .card.matched .card-back {
-    background: #4caf50;
+    background: var(--verde-match);
     color: white;
 }
 
@@ -171,7 +199,7 @@ body {
 
 .reset-btn {
     margin-top: 30px;
-    background: #ff7043;
+    background: var(--accent-naranja);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -181,10 +209,11 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 112, 67, 0.3);
+    min-height: 44px; /* Touch-friendly minimum size */
 }
 
 .reset-btn:hover {
-    background: #ff5722;
+    background: var(--accent-naranja-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 112, 67, 0.4);
 }
@@ -201,6 +230,8 @@ body {
     text-align: center;
     z-index: 1000;
     display: none;
+    max-width: 90vw;
+    width: 400px;
 }
 
 .victory-message.show {
@@ -214,29 +245,299 @@ body {
 }
 
 .victory-title {
-    color: #4caf50;
+    color: var(--verde-match);
     font-size: 2rem;
     margin-bottom: 15px;
+    font-family: 'Ghotam Rounded Light'
 }
 
 .victory-stats {
-    color: #00695c;
+    color: var(--secundario-oscuro);
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+/* Responsive Design - Mobile First Approach */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .game-board {
+        gap: 12px;
+        padding: 18px;
+    }
+    
     .card {
-        width: 60px;
-        height: 60px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
     }
     
     .title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .controls {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .size-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .stats {
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .stat {
+        padding: 12px 20px;
+        min-width: 100px;
+    }
+    
+    .stat-value {
+        font-size: 1.6rem;
     }
     
     .game-board {
         gap: 10px;
         padding: 15px;
     }
-} 
+    
+    .card {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .card-back {
+        font-size: 1.3rem;
+    }
+    
+    .reset-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header {
+        margin-bottom: 20px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .controls {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .size-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+    
+    .stats {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .stat {
+        padding: 10px 15px;
+        min-width: 80px;
+        border-radius: 15px;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .stat-value {
+        font-size: 1.4rem;
+    }
+    
+    .game-board {
+        gap: 8px;
+        padding: 12px;
+        border-radius: 15px;
+    }
+    
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-front, .card-back {
+        border-radius: 12px;
+    }
+    
+    .card-back {
+        font-size: 1.1rem;
+    }
+    
+    .reset-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 20px;
+    }
+    
+    .victory-message {
+        padding: 20px;
+        border-radius: 15px;
+        width: 90vw;
+        max-width: 350px;
+    }
+    
+    .victory-title {
+        font-size: 1.6rem;
+    }
+    
+    .victory-stats {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.6rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .size-btn {
+        width: 200px;
+        padding: 10px 16px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .stat {
+        width: 150px;
+    }
+    
+    .game-board.size-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .game-board.size-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .game-board.size-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .card {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .card-back {
+        font-size: 0.9rem;
+    }
+    
+    .victory-message {
+        padding: 15px;
+        width: 95vw;
+    }
+    
+    .victory-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .size-btn {
+        width: 180px;
+        font-size: 0.75rem;
+    }
+    
+    .card {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .card-back {
+        font-size: 0.8rem;
+    }
+    
+    .game-board {
+        gap: 6px;
+        padding: 10px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+    
+    .header {
+        margin-bottom: 15px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .controls {
+        margin-bottom: 8px;
+    }
+    
+    .stats {
+        margin-bottom: 15px;
+    }
+    
+    .game-board {
+        gap: 6px;
+        padding: 10px;
+    }
+    
+    .card {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .card-back {
+        font-size: 0.7rem;
+    }
+    
+    .reset-btn {
+        margin-top: 15px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

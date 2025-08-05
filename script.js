@@ -1,14 +1,14 @@
-let currentSize = 3;
+let currentSize = 4;
 let cards = [];
 let flippedCards = [];
 let matchedPairs = 0;
 let attempts = 0;
 let canFlip = true;
 
-function initGame(size = 3) {
+function initGame(size = 4) {
     currentSize = size;
     const totalCards = size * size;
-    const totalPairs = totalCards / 2;
+    const totalPairs = Math.floor(totalCards / 2);
     
     // Update UI
     document.getElementById('total-pairs').textContent = totalPairs;
@@ -132,5 +132,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize game
-    initGame(3);
+    initGame(4);
 }); 
