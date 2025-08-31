@@ -91,7 +91,8 @@
   @media (max-width: 768px) {
     .buttons-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px 20px;
+      gap: 28px 20px; /* aumenta el gap entre filas */
+      margin-top: 36px; /* separa los botones del logo */
     }
     .logo {
       width: 400px;
@@ -102,7 +103,8 @@
   @media (max-width: 480px) {
     .buttons-grid {
       grid-template-columns: repeat(2, 1fr); /* 👈 dos columnas en mobile */
-      gap: 12px 14px;
+      gap: 30px 14px; /* aumenta el gap entre filas */
+      margin-top: 30px; /* separa los botones del logo */
     }
     .logo {
       width: 220px;          /* logo más chico */
