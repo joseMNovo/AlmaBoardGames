@@ -96,7 +96,10 @@ class SimonSaysGame {
         
         // Activar el botón
         button.classList.add('active');
-        this.playSound(color);
+        // Asegurarse que el sonido siempre suene si está activado
+        if (this.isAudioEnabled) {
+            this.playSound(color);
+        }
         
         // Esperar 300ms
         await this.delay(300);
@@ -114,6 +117,10 @@ class SimonSaysGame {
             this.currentIndex++;
             
             // Resaltar el botón clickeado
+            // Asegurarse que el sonido siempre suene si está activado
+            if (this.isAudioEnabled) {
+                this.playSound(color);
+            }
             this.highlightButton(color);
             
             // Verificar si completó la secuencia
@@ -155,7 +162,7 @@ class SimonSaysGame {
     }
     
     playSound(frequency) {
-        // Solo reproducir sonido si está habilitado
+        // El sonido solo depende de isAudioEnabled, pero la lógica de asegurarse de sonar ya está en highlightButton y handleButtonClick
         if (!this.isAudioEnabled) return;
         
         // Crear un oscilador de audio para generar el sonido
