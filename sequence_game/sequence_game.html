@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secuencia</title>
+  <link rel="stylesheet" href="sequence_game.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">🔢 Secuencia</h1>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Modo</div>
+        <div class="stat-value" id="mode-label">Números</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Nivel</div>
+        <div class="stat-value" id="level-label">1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <p class="subtitle">Tocá en <strong>orden</strong> los elementos que correspondan.</p>
+
+    <div class="controls top">
+      <button id="mode-numbers" class="size-btn active">Números</button>
+      <button id="mode-letters" class="size-btn">Letras</button>
+    </div>
+
+    <div id="grid" class="grid" aria-live="polite">
+      <!-- fichas generadas por JS -->
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite"></div>
+  </div>
+
+  <div class="bottom-buttons">
+    <button class="reset-btn" onclick="window.location.href='../index.html'">← Volver</button>
+    <button class="reset-btn" id="new-game-btn">Nuevo juego</button>
+  </div>
+
+  <footer>
+    <p>Alma Rosario - 2025</p>
+  </footer>
+
+  <script src="sequence_game.js"></script>
+</body>
+</html>
