@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra secreta - Juego de Palabras</title>
+    <link rel="stylesheet" href="hangman.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title">🕵️‍♂️ Palabra secreta</h1>
+        <p class="subtitle">Juego de Palabras</p>
+    </div>
+
+
+    <div class="game-container">
+        <div class="game-status">
+            <div id="status-message">¡Adivina la palabra!</div>
+        </div>
+
+        <div class="word-display">
+            <div class="word-blanks" id="word-blanks">
+                <!-- Los espacios en blanco se generarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="game-container">
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Intentos restantes</div>
+                <div class="stat-value" id="attempts-left">10</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Letras usadas</div>
+                <div class="stat-value" id="used-letters">0</div>
+            </div>
+        </div>
+
+        <div class="alphabet-container">
+            <div class="alphabet-grid" id="alphabet-grid">
+                <!-- Los botones del alfabeto se generarán dinámicamente -->
+            </div>
+        </div>
+
+        <!-- <div class="game-status">
+            <div id="status-message">¡Adivina la palabra!</div>
+        </div> -->
+    </div>
+
+    <div class="bottom-buttons" style="display: flex; gap: 12px; justify-content: center; margin-top: 18px;">
+        <button class="reset-btn" onclick="window.location.href='../index.html'">← Volver</button>
+        <button class="new-game-btn" id="new-game-btn">Nuevo juego</button>
+    </div>
+
+    <!-- Modal de resultado del juego -->
+    <div class="game-result-modal" id="game-result-modal">
+        <div class="modal-content">
+            <h3 id="result-title">¡Felicitaciones!</h3>
+            <div class="result-stats" id="result-stats"></div>
+            <div class="modal-buttons">
+                <button class="modal-btn secondary" onclick="window.location.href='../index.html'">← Volver</button>
+                <button class="modal-btn primary" id="play-again-btn">Jugar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Alma Rosario - 2025</p>
+    </footer>
+
+    <script src="hangman.js"></script>
+</body>
+
+</html>
