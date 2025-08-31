@@ -287,6 +287,8 @@ body {
     color: var(--secundario-oscuro);
     font-size: 1.1rem;
     font-weight: 600;
+    max-width: 1000px;
+    min-width: 300px;
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
