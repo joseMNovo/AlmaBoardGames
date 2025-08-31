@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simón dice - Juego de Memoria</title>
+    <link rel="stylesheet" href="simon_says.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">🎮 Simón dice</h1>
+        <p class="subtitle">Juego de Memoria</p>
+    </div>
+
+    <div class="game-container">
+        <div class="score-container">
+            <div class="score-label">Nivel: <span id="score">0</span></div>
+            <button class="audio-toggle" id="audio-toggle" title="Activar/Desactivar sonido">
+                🔊
+            </button>
+        </div>
+
+        <div class="simon-board">
+            <div class="button-row">
+                <button class="simon-button red" id="red" data-color="red"></button>
+                <button class="simon-button blue" id="blue" data-color="blue"></button>
+            </div>
+            <div class="button-row">
+                <button class="simon-button green" id="green" data-color="green"></button>
+                <button class="simon-button yellow" id="yellow" data-color="yellow"></button>
+            </div>
+        </div>
+
+        <div class="game-status">
+            <div id="status-message">Presiona "Comenzar" para jugar</div>
+        </div>
+
+    </div>
+
+    <div class="bottom-buttons" style="display: flex; gap: 12px; justify-content: center; margin-top: 18px;">
+        <button class="reset-btn" onclick="window.location.href='../index.html'">← Volver</button>
+        <button class="start-btn" id="start-btn">Comenzar</button>
+        <button class="reset-btn" id="restart-btn">Reiniciar</button>
+    </div>
+
+    <!-- Modal de resultado del juego -->
+    <div class="game-result-modal" id="game-result-modal">
+        <div class="modal-content">
+            <h3 id="result-title">¡Felicitaciones!</h3>
+            <div class="result-stats" id="result-stats"></div>
+            <div class="modal-buttons">
+                <button class="modal-btn secondary" onclick="window.location.href='../index.html'">← Volver</button>
+                <button class="modal-btn primary" id="play-again-btn">Jugar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de contador de inicio -->
+    <div class="countdown-modal" id="countdown-modal">
+        <div class="modal-content">
+            <h3>¡Preparate!</h3>
+            <div class="countdown-number" id="countdown-number">3</div>
+            <p>El juego comenzará en...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Alma Rosario - 2025</p>
+    </footer>
+
+    <script src="simon_says.js"></script>
+</body>
+</html>

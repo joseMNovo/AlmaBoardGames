@@ -8,6 +8,7 @@ class WordSearchGame {
         this.foundWords = new Set();
         this.gameStartTime = null;
         this.timerInterval = null;
+        this.showMobileInstructions = true; // Para controlar el modal móvil
         
         this.gridElement = document.getElementById("grid");
         this.wordsListElement = document.getElementById("words-list");
@@ -19,6 +20,7 @@ class WordSearchGame {
         
         this.initializeGame();
         this.setupEventListeners();
+        this.showMobileInstructionsModal();
     }
 
     seleccionarPalabrasAleatorias(cantidad) {
@@ -133,9 +135,18 @@ class WordSearchGame {
             // Verificar si las celdas están en línea
             const cells = this.getCellsInLine(firstCell, secondCell);
             if (cells.length > 1) {
-                const word = this.getWordFromCells(cells);
-                if (this.palabras.includes(word)) {
-                    this.markWordAsFound(cells, word);
+                // Obtener la palabra en dirección hacia adelante
+                const wordForward = this.getWordFromCells(cells);
+                
+                // Crear una copia del array para la dirección hacia atrás
+                const cellsBackward = [...cells].reverse();
+                const wordBackward = this.getWordFromCells(cellsBackward);
+                
+                // Verificar si alguna de las palabras está en la lista
+                if (this.palabras.includes(wordForward)) {
+                    this.markWordAsFound(cells, wordForward);
+                } else if (this.palabras.includes(wordBackward)) {
+                    this.markWordAsFound(cellsBackward, wordBackward);
                 }
             }
 
@@ -227,6 +238,8 @@ class WordSearchGame {
         // Seleccionar nuevas palabras aleatorias
         this.palabras = this.seleccionarPalabrasAleatorias(5);
         this.initializeGame();
+        // Mostrar modal móvil al reiniciar
+        this.showMobileInstructionsModal();
     }
 
     setupEventListeners() {
@@ -240,6 +253,31 @@ class WordSearchGame {
                 // Aquí se podría cambiar la dificultad
             });
         });
+    }
+
+    showMobileInstructionsModal() {
+        // Solo mostrar en dispositivos móviles
+        if (window.innerWidth <= 768) {
+            const modal = document.getElementById("mobile-instructions-modal");
+            if (modal) {
+                modal.classList.add("show");
+                
+                // Agregar event listener para cerrar el modal
+                const closeBtn = modal.querySelector(".modal-close-btn");
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", () => {
+                        modal.classList.remove("show");
+                    });
+                }
+                
+                // Cerrar al hacer clic fuera del modal
+                modal.addEventListener("click", (event) => {
+                    if (event.target === modal) {
+                        modal.classList.remove("show");
+                    }
+                });
+            }
+        }
     }
 }
 
