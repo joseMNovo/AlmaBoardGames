@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧩 Adivinanza</title>
+
+  <link rel="stylesheet" href="riddle_game.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">🧩 Adivinanza</h1>
+
+    <div class="stats" role="group" aria-label="Estadísticas del juego">
+      <div class="stat">
+        <div class="stat-label">Ronda</div>
+        <div class="stat-value" id="round-label">1</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Puntaje</div>
+        <div class="stat-value" id="score-label">0</div>
+      </div>
+    </div>
+  </div>
+
+  <main class="game-container" role="region" aria-labelledby="riddle-title">
+    <p id="riddle-text" class="riddle-text" aria-live="polite">
+      <!-- Pregunta se inserta por JS -->
+    </p>
+
+    <div id="answers" class="answers" aria-live="polite">
+      <!-- Botones de respuesta generados por JS -->
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite"></div>
+
+    <div class="controls">
+      <button id="next-btn" class="btn primary" disabled>Siguiente</button>
+    </div>
+  </main>
+
+  <div class="bottom-buttons">
+    <a class="reset-btn" href="../index.html">← Volver</a>
+    <button id="reset-btn" class="reset-btn">Volver a jugar</button>
+  </div>
+
+  <footer>
+    <p>Alma Rosario - 2025</p>
+  </footer>
+
+  <script src="riddle_game.js"></script>
+</body>
+</html>

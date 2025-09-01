@@ -1,0 +1,503 @@
+/* ==== ALMA – estilo consistente y estética cuidada ==== */
+:root {
+    --bg1: #e0f7fa;
+    --bg2: #b2ebf2;
+    --text: #004F66;
+    --white: #ffffff;
+
+    --teal: #5EC0CF;
+    --teal-hover: #4AA8B6;
+
+    /* Botones naranjas (inferiores) */
+    --orange: #ff7043;
+    --orange-hover: #ff5722;
+
+    /* Colores para categorías (distintos entre sí) */
+    --catA: #5EC0CF;
+    /* teal */
+    --catA-hover: #4AA8B6;
+    --catB: #9A8BC2;
+    /* violeta */
+    --catB-hover: #8577b0;
+
+    --ok: #37c36a;
+    --err: #e76666;
+
+    --shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+    --softshadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius-lg: 20px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: var(--text);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .05);
+    margin-bottom: 12px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 14px;
+}
+
+.stat {
+    background: var(--white);
+    padding: 12px 18px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--softshadow);
+    min-width: 130px;
+    text-align: center;
+}
+
+.stat-label {
+    font-weight: 800;
+    font-size: .95rem;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--teal);
+}
+
+/* Contenedor principal */
+.game-container {
+    background: rgba(255, 255, 255, .2);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    /* espacio para que el footer no tape nada en pantallas chicas */
+    margin-bottom: 64px;
+}
+
+/* Segmented control (selector de set) */
+.segmented {
+    background: rgba(255, 255, 255, .55);
+    border-radius: 28px;
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--softshadow);
+    margin-bottom: 12px;
+}
+
+.segment {
+    border: double;
+    background: transparent;
+    color: var(--text);
+    font-weight: 900;
+    padding: 10px 14px;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
+}
+
+.segment:hover {
+    background: rgba(255, 255, 255, .6);
+    transform: translateY(-1px);
+}
+
+.segment.active {
+    background: var(--teal);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(94, 192, 207, .35);
+}
+
+/* Título set */
+.subtitle {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+/* Pool de fichas (todas las palabras en un cuadro) */
+.pool {
+    background: rgba(255, 255, 255, .25);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    box-shadow: var(--softshadow);
+    margin-bottom: 14px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.chip {
+    background: #fff;
+    color: var(--text);
+    border: 2px solid rgba(94, 192, 207, .45);
+    border-radius: 16px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: var(--softshadow);
+    transition: transform .12s ease, background .12s ease, border-color .12s ease, color .12s ease, opacity .12s ease;
+}
+
+.chip:hover {
+    transform: translateY(-2px);
+    background: #f4feff;
+    border-color: var(--teal);
+}
+
+.chip.selected {
+    outline: 3px solid rgba(94, 192, 207, .35);
+}
+
+.chip.lock {
+    cursor: default;
+    opacity: .95;
+}
+
+.chip.catA {
+    background: var(--catA);
+    border-color: var(--catA);
+    color: #fff;
+}
+
+.chip.catB {
+    background: var(--catB);
+    border-color: var(--catB);
+    color: #fff;
+}
+
+/* Botones de clasificación (abajo del cuadro) */
+.classify-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 22px;
+    padding: 12px 18px;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    box-shadow: var(--softshadow);
+    min-height: 42px;
+}
+
+.btn.classify.a {
+    background: var(--catA);
+    color: #fff;
+}
+
+.btn.classify.a:hover {
+    background: var(--catA-hover);
+    transform: translateY(-2px);
+}
+
+.btn.classify.b {
+    background: var(--catB);
+    color: #fff;
+}
+
+.btn.classify.b:hover {
+    background: var(--catB-hover);
+    transform: translateY(-2px);
+}
+
+/* Feedback */
+.feedback {
+    min-height: 24px;
+    text-align: center;
+    font-weight: 900;
+    margin: 8px 0 0;
+}
+
+.feedback.ok {
+    color: #188a4e;
+}
+
+.feedback.err {
+    color: #a53e3e;
+}
+
+/* Botones inferiores */
+.bottom-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.reset-btn {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    box-shadow: 0 4px 14px rgba(255, 112, 67, .3);
+    min-height: 42px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset-btn:hover {
+    background: var(--orange-hover);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-weight: 700;
+    font-size: .9rem;
+    opacity: .85;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, .35);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablets angostas */
+@media (max-width: 900px) {
+    .game-container {
+        max-width: 860px;
+    }
+
+    /* segmented scrollable como en mobile */
+    .segmented {
+        padding: 6px 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        justify-content: flex-start;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .segmented::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* WebKit */
+    .segment {
+        flex: 0 0 auto;
+        /* evita que colapsen */
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    /* segmented scrollable como en mobile */
+    .segmented {
+        padding: 6px 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        justify-content: flex-start;
+        scrollbar-width: none;
+    }
+
+    .segmented::-webkit-scrollbar {
+        display: none;
+    }
+
+    .segment {
+        flex: 0 0 auto;
+        font-size: .95rem;
+        padding: 9px 12px;
+        border-radius: 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 110px;
+        padding: 9px 12px;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .game-container {
+        padding: 16px;
+        margin-bottom: 72px;
+    }
+
+    /* segmented scrollable */
+    .segmented {
+        padding: 6px 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        justify-content: flex-start;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .segmented::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* WebKit */
+    .segment {
+        flex: 0 0 auto;
+        /* no se colapsa */
+        font-size: .9rem;
+        padding: 8px 12px;
+        border-radius: 18px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .pool {
+        padding: 12px;
+    }
+
+    .chips {
+        gap: 8px;
+    }
+
+    .chip {
+        padding: 8px 10px;
+        font-size: .95rem;
+        border-radius: 14px;
+    }
+
+    .classify-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 10px 14px;
+        font-size: .95rem;
+        border-radius: 18px;
+        min-height: 40px;
+    }
+
+    /* en móviles medianos, dos columnas para los botones */
+    .btn.classify.a,
+    .btn.classify.b {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    footer {
+        bottom: 10px;
+        right: 10px;
+        font-size: .78rem;
+    }
+
+    footer p {
+        padding: 6px 10px;
+        border-radius: 12px;
+    }
+}
+
+/* Mobile muy chico */
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .segment {
+        font-size: .85rem;
+        padding: 7px 10px;
+    }
+
+    .chip {
+        padding: 7px 9px;
+        font-size: .92rem;
+        border-radius: 12px;
+    }
+
+    .btn {
+        padding: 9px 12px;
+        font-size: .92rem;
+        border-radius: 16px;
+    }
+
+    /* en pantallas muy angostas, los botones ocupan todo el ancho uno debajo del otro */
+    .btn.classify.a,
+    .btn.classify.b {
+        flex: 1 1 100%;
+    }
+}

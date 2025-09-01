@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🗂️ Clasificación rápida</title>
+
+  <link rel="stylesheet" href="quick_sort.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">🗂️ Clasificación rápida</h1>
+
+    <div class="stats" role="group" aria-label="Estadísticas del juego">
+      <div class="stat">
+        <div class="stat-label">Correctas</div>
+        <div class="stat-value" id="ok-label">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Restantes</div>
+        <div class="stat-value" id="left-label">0</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="game-container" role="region" aria-labelledby="game-title">
+    <!-- Selector de categorías: segmented control -->
+    <div class="segmented" role="tablist" aria-label="Selector de categorías">
+      <!-- segmentados generados por JS -->
+    </div>
+
+    <!-- Título del set actual -->
+    <!-- <h2 class="subtitle" id="set-title" aria-live="polite">Emociones vs Objetos</h2> -->
+
+    <!-- Cuadro con palabras -->
+    <section class="pool" aria-label="Palabras para clasificar">
+      <div id="pool" class="chips" aria-live="polite">
+        <!-- chips generados por JS -->
+      </div>
+    </section>
+
+    <!-- Botones de clasificación -->
+    <div class="classify-buttons" role="group" aria-label="Acciones de clasificación">
+      <button id="btn-cat-a" class="btn classify a">Es A</button>
+      <button id="btn-cat-b" class="btn classify b">Es B</button>
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite"></div>
+  </main>
+
+  <!-- Botones inferiores -->
+  <div class="bottom-buttons">
+    <a class="reset-btn" href="../index.html">← Volver</a>
+    <button id="reset-btn" class="reset-btn">Volver a jugar</button>
+  </div>
+
+  <footer>
+    <p>Alma Rosario - 2025</p>
+  </footer>
+
+  <script src="quick_sort.js"></script>
+</body>
+</html>
