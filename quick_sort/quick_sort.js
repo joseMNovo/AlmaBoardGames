@@ -53,7 +53,7 @@
         {
             title: "Partes del cuerpo vs Objetos",
             A: { name: "Partes del cuerpo", button_title: "Parte", words: ["MANO", "PIE", "CABEZA", "OJO", "BOCA"] },
-            B: { name: "Objetos", button_title: "Objeto", words: ["CUADERNO", "SILLA", "BOTELLA", "VASO", "BOLIGRAFO"] }
+            B: { name: "Objetos", button_title: "Objeto", words: ["CUADERNO", "SILLA", "BOTELLA", "VASO", "LAPICERA"] }
         },
         {
             title: "Estaciones vs Días",
