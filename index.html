@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alma Rosario - Juegos</title>
   <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/png" href="img/flor-juegos.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <img src="img/logo-alma-1.png" alt="Logo Alma" class="logo">
 
-    <div class="buttons-grid">
-      <a href="memory_board/memory_board.html" class="game-btn">🧠 Juego de la memoria</a>
-      <a href="word_search/word_search.html" class="game-btn">🔍 Sopa de letras</a>
-      <a href="simon_says/simon_says.html" class="game-btn">🎮 Simón dice</a>
-      <a href="hangman/hangman.html" class="game-btn">🕵️‍♂️ Palabra secreta</a>
-      <a href="simple_math/simple_math.html" class="game-btn">➕ Cálculos sencillos</a>
-      <a href="sequence_game/sequence_game.html" class="game-btn">🔢 Secuencia</a>
-      <!-- <a href="riddle_game/riddle_game.html" class="game-btn">🧩 Adivinanza</a> -->
-      <a href="quick_sort/quick_sort.html" class="game-btn">🗂️ Clasificación</a>
-    </div>
+    <section class="games-card" aria-label="Listado de juegos">
+      <h2 class="games-title">Juegos</h2>
+
+      <!-- En desktop NO tiene scroll; en tablet/mobile SÍ (lo controla el CSS) -->
+      <div class="games-scroll">
+        <div class="buttons-grid">
+          <a href="memory_board/memory_board.html" class="game-btn">🧠 Juego de la memoria</a>
+          <a href="word_search/word_search.html" class="game-btn">🔍 Sopa de letras</a>
+          <a href="simon_says/simon_says.html" class="game-btn">🎮 Simón dice</a>
+          <a href="hangman/hangman.html" class="game-btn">🕵️‍♂️ Palabra secreta</a>
+          <a href="simple_math/simple_math.html" class="game-btn">➕ Cálculos sencillos</a>
+          <a href="sequence_game/sequence_game.html" class="game-btn">🔢 Secuencia</a>
+          <a href="quick_sort/quick_sort.html" class="game-btn">🗂️ Clasificación</a>
+          <!-- <a href="riddle_game/riddle_game.html" class="game-btn">🧩 Adivinanza</a> -->
+        </div>
+      </div>
+
+      <p class="hint">Deslizá para ver más</p>
+    </section>
   </div>
 
   <footer>
     <p>Alma Rosario - 2025</p>
   </footer>
 </body>
-
 </html>
