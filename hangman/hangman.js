@@ -1,6 +1,6 @@
 class HangmanGame {
     constructor() {
-        [
+        this.words = [
             "FAMILIA",
             "MEMORIA",
             "AMISTAD",
