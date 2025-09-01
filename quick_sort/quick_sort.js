@@ -202,6 +202,13 @@
         });
     }
 
+    // Nueva función para habilitar/deshabilitar los botones de categoría
+    function updateCategoryButtonsState() {
+        const enabled = !!selectedChip;
+        btnA.disabled = !enabled;
+        btnB.disabled = !enabled;   
+    }
+
     function loadSet(index) {
         currentSetIndex = index;
         // Cambiar de página si el set no está en la página actual
@@ -249,6 +256,9 @@
 
         // Asegurarse de que el control segmentado esté bien
         renderSegmentedControl();
+
+        // Deshabilitar los botones de categoría al cargar un set
+        updateCategoryButtonsState();
     }
 
     function updateStats() {
@@ -266,6 +276,7 @@
         chip.classList.toggle('selected');
         selectedChip = chip.classList.contains('selected') ? chip : null;
         clearFeedback();
+        updateCategoryButtonsState();
     }
 
     function classify(targetCat) {
@@ -291,6 +302,7 @@
             feedback.classList.add('ok');
 
             selectedChip = null;
+            updateCategoryButtonsState();
 
             if (remaining <= 0) {
                 feedback.textContent = "¡Bien hecho!";

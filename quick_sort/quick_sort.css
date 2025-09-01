@@ -227,6 +227,11 @@ body {
     min-height: 42px;
 }
 
+.btn:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
 .btn.classify.a {
     background: var(--catA);
     color: #fff;
