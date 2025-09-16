@@ -825,3 +825,45 @@ footer p {
         font-size: 0.8rem;
     }
 }
+
+/* ---------- Responsive: PANTALLA GRANDE (≈52 pulgadas, 4K) ---------- */
+@media (min-width: 3800px) {
+    html { font-size: 2.1rem; }
+  
+    .header { max-width: 4200px; margin-bottom: 50px; }
+    .title { font-size: 3.8rem; margin-bottom: 20px; }
+    .subtitle { font-size: 1.8rem; }
+  
+    .game-container { padding: 64px; gap: 50px; max-width: 2600px; border-radius: 36px; }
+  
+    .hangman-display { max-width: 600px; min-height: 420px; padding: 42px; border-radius: 32px; }
+    .hangman-drawing { font-size: 2rem; line-height: 1.8; }
+  
+    .word-blanks { font-size: 3.6rem; gap: 20px; }
+    .letter-blank { width: 96px; height: 118px; border-bottom-width: 9px; }
+  
+    .stats { gap: 70px; margin-bottom: 20px; }
+    .stat { padding: 40px 56px; min-width: 320px; border-radius: 32px; }
+    .stat-label { font-size: 1.6rem; margin-bottom: 16px; }
+    .stat-value { font-size: 3.4rem; }
+  
+    .alphabet-container { max-width: 2000px; padding-top: 42px; }
+    .alphabet-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 22px; }
+    .letter-btn { padding: 30px; font-size: 2rem; min-height: 110px; min-width: 110px; border-radius: 28px; }
+  
+    .game-status { min-height: 120px; }
+    #status-message { font-size: 1.8rem; padding: 26px 36px; min-height: 80px; border-radius: 24px; }
+  
+    .new-game-btn, .reset-btn { padding: 28px 54px; font-size: 1.8rem; min-height: 100px; border-radius: 34px; }
+  
+    .game-result-modal .modal-content { width: 2800px; padding: 150px; border-radius: 32px; }
+    .game-result-modal h3 { font-size: 3rem; margin-bottom: 28px; }
+    .game-result-modal .result-stats { font-size: 2rem; margin-bottom: 36px; }
+    .modal-buttons { gap: 28px; }
+    .modal-btn { padding: 22px 36px; font-size: 1.7rem; min-width: 240px; min-height: 100px; border-radius: 32px; }
+  
+    footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+    footer p { padding: 20px 32px; border-radius: 28px; }
+  }
+  
+  

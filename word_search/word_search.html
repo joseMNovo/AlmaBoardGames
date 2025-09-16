@@ -10,55 +10,61 @@
     <link rel="icon" type="image/png" href="../statics/img/flor-juegos.png">
 </head>
 <body>
-    <div class="header">
+    <main class="ws-layout">
+      <div class="header">
         <!-- <img src="../statics/img/logo-alma-1.png" alt="Logo" class="logo"> -->
         <h1 class="title">🔍 Sopa de Letras</h1>
-    </div>
-
-    <div class="words-container">
+      </div>
+  
+      <!-- Mobile primero (vertical) -->
+      <div class="words-container">
         <h2 class="words-title">Palabras a encontrar:</h2>
         <div class="words-list" id="words-list"></div>
-    </div>
-
-    <div class="stats">
+      </div>
+  
+      <div class="stats">
         <div class="stat">
-            <div class="stat-label">Tiempo</div>
-            <div class="stat-value" id="time">00:00</div>
+          <div class="stat-label">Tiempo</div>
+          <div class="stat-value" id="time">00:00</div>
         </div>
         <div class="stat">
-            <div class="stat-label">Encontradas</div>
-            <div class="stat-value" id="found">0/5</div>
+          <div class="stat-label">Encontradas</div>
+          <div class="stat-value" id="found">0/5</div>
         </div>
-    </div>
-
-    <div class="game-container">
+      </div>
+  
+      <div class="game-container">
         <div class="grid" id="grid"></div>
-    </div>
-
-
-
-    <div class="bottom-buttons" style="display: flex; gap: 12px; justify-content: center; margin-top: 18px;">
+      </div>
+  
+      <div class="bottom-buttons" style="display:flex;gap:12px;justify-content:center;margin-top:18px;">
         <button class="reset-btn" onclick="window.location.href='../index.html'">← Volver</button>
         <button class="reset-btn" id="reset-btn">Volver a jugar</button>
-    </div>
-
+      </div>
+    </main>
+  
+    <!-- Modales (fixed) quedan fuera del grid -->
     <div class="victory-message" id="victory-message">
-        <h2 class="victory-title">¡Felicitaciones!</h2>
-        <div class="victory-stats" id="victory-stats"></div>
-        <button class="reset-btn" onclick="resetGame()">Jugar de nuevo</button>
+      <h2 class="victory-title">¡Felicitaciones!</h2>
+      <div class="victory-stats" id="victory-stats"></div>
+      <button class="reset-btn" onclick="resetGame()">Jugar de nuevo</button>
     </div>
-
-    <!-- Modal de instrucciones móviles -->
+  
     <div class="mobile-instructions-modal" id="mobile-instructions-modal">
-        <div class="modal-content">
-            <h3>📱 Instrucciones</h3>
-            <p>Presiona la primera y última letra de la palabra elegida</p>
-            <button class="modal-close-btn">Entendido</button>
-        </div>
+      <div class="modal-content">
+        <h3>📱 Instrucciones</h3>
+        <p>Presiona la primera y última letra de la palabra elegida</p>
+        <button class="modal-close-btn">Entendido</button>
+      </div>
     </div>
-
+  
     <script src="word_search.js"></script>
-</body>
+  
+    <footer>
+      <p>Alma Rosario - 2025</p>
+    </footer>
+  </body>
+  
 
 <footer>
     <p>Alma Rosario - 2025</p>

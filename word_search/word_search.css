@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Gotham Rounded', 'Nunito Sans', sans-serif;
-    background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -311,7 +311,7 @@ footer p {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design - Mobile First Approach */
@@ -773,6 +773,7 @@ footer p {
         opacity: 0;
         transform: scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -912,5 +913,212 @@ footer p {
         margin-top: 15px;
         padding: 8px 16px;
         font-size: 0.8rem;
+    }
+}
+
+/* —— Desktop (≥1160px): tablero | palabras —— */
+@media (min-width: 1160px) {
+    .ws-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 480px;
+        /* izquierda: tablero | derecha: palabras */
+        grid-template-areas:
+            "header  header"
+            "stats   stats"
+            "board   words"
+            "buttons words";
+        column-gap: 28px;
+        row-gap: 24px;
+        align-items: start;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .stats {
+        grid-area: stats;
+        justify-content: center;
+    }
+
+    .game-container {
+        grid-area: board;
+    }
+
+    .words-container {
+        grid-area: words;
+        align-self: start;
+    }
+
+    .bottom-buttons {
+        justify-self: center;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-left: 500px;
+    }
+
+    /* Ancho homogéneo de la columna izquierda para alinear stats/board/botones */
+    .stats,
+    .game-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title {
+        color: var(--principal-violeta);
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-left: 400px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (min-width: 3800px) {
+    html {
+        font-size: 2.3rem;
+    }
+
+    /* ↑ base */
+
+    /* Más ancho útil para tablero y lateral */
+    .ws-layout {
+        grid-template-columns: minmax(0, 2200px) 680px;
+        /* tablero | palabras */
+        column-gap: 40px;
+    }
+
+    /* Alinear columna izquierda más ancha */
+    .stats,
+    .game-container,
+    .bottom-buttons {
+        max-width: 2200px;
+        /* antes 2000/1600 */
+    }
+
+    /* Título y stats más grandes */
+    .title {
+        margin-left: 950px;
+        width: 900px;
+    }
+
+    .stat {
+        min-width: 420px;
+        padding: 48px 72px;
+        border-radius: 36px;
+    }
+
+    .stat-label {
+        font-size: 2.1rem;
+    }
+
+    .stat-value {
+        font-size: 3.6rem;
+    }
+
+    /* Tablero grande y cómodo */
+    .game-container {
+        padding: 84px;
+    }
+
+    .grid {
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .cell {
+        width: 124px;
+        height: 124px;
+        font-size: 2.8rem;
+        border-radius: 22px;
+    }
+
+    /* Lateral (palabras) más presente */
+    .words-container {
+        padding: 56px;
+    }
+
+    .words-title {
+        font-size: 3rem;
+        margin-bottom: 28px;
+    }
+
+    .words-list {
+        gap: 24px;
+        font-size: 2.1rem;
+    }
+
+    .word {
+        padding: 18px 30px;
+        border-radius: 26px;
+    }
+
+    /* Botones inferiores más protagonistas */
+    .reset-btn {
+        padding: 34px 72px;
+        font-size: 2.3rem;
+        min-height: 120px;
+        border-radius: 36px;
+        font-weight: 900;
+    }
+}
+
+
+/* Mostrar el modal en cualquier tamaño cuando tenga la clase .open */
+.mobile-instructions-modal.open {
+    display: flex !important;
+    /* pisa cualquier media query previa */
+}
+
+/* Desktop (≥1024px): tamaño cómodo del modal */
+@media (min-width: 1024px) {
+    .mobile-instructions-modal .modal-content {
+        width: 720px;
+        padding: 40px;
+        border-radius: 28px;
+    }
+
+    .mobile-instructions-modal h3 {
+        font-size: 2.2rem;
+        margin-bottom: 16px;
+    }
+
+    .mobile-instructions-modal p {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .mobile-instructions-modal .modal-close-btn {
+        padding: 16px 28px;
+        font-size: 1.6rem;
+        border-radius: 24px;
+    }
+}
+
+/* 4K / 3800px+: estilo TV grande */
+@media (min-width: 3800px) {
+    .mobile-instructions-modal .modal-content {
+        width: 1200px;
+        padding: 80px;
+        border-radius: 32px;
+    }
+
+    .mobile-instructions-modal h3 {
+        font-size: 3rem;
+        margin-bottom: 18px;
+    }
+
+    .mobile-instructions-modal p {
+        font-size: 2rem;
+        margin-bottom: 28px;
+    }
+
+    .mobile-instructions-modal .modal-close-btn {
+        padding: 22px 36px;
+        font-size: 1.8rem;
+        min-height: 96px;
+        border-radius: 32px;
     }
 }

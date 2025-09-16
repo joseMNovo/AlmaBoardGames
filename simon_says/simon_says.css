@@ -48,7 +48,8 @@ body {
 }
 
 .title {
-    color: var(--principal-violeta);
+    color: var(--principal-violeta
+    );
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -808,3 +809,52 @@ footer p {
         font-size: 0.85rem;
     }
 }
+
+@media (min-width: 3800px) {
+    html { font-size: 2.1rem; }
+  
+    .header { max-width: 4200px; margin-bottom: 72px; }
+    .title { font-size: 4.4rem; margin-bottom: 18px; }
+    .subtitle { font-size: 2rem; opacity: .9; }
+  
+    .game-container { padding: 72px; gap: 40px; border-radius: 38px; }
+  
+    .score-container { padding: 28px 44px; border-radius: 32px; }
+    .score-label { font-size: 2rem; }
+    #score { font-size: 2.4rem; }
+    .audio-toggle { width: 72px; height: 72px; font-size: 2.2rem; }
+  
+    /* Tablero y botones */
+    .simon-board { gap: 42px; max-width: 920px; }
+    .button-row { gap: 42px; }
+    .simon-button { width: 220px; height: 220px; box-shadow: 0 10px 28px rgba(0,0,0,.18); }
+    .simon-button.active { transform: scale(0.96); }
+  
+    .game-status { margin-top: 10px; }
+    #status-message { font-size: 1.9rem; padding: 20px 34px; min-height: 84px; border-radius: 24px; }
+  
+    /* Botones inferiores */
+    .bottom-buttons { gap: 44px; margin-top: 56px; }
+    .start-btn, .reset-btn {
+      padding: 30px 64px;
+      font-size: 2.1rem;
+      min-height: 110px;
+      border-radius: 34px;
+      font-weight: 900;
+    }
+  
+    /* Modal resultado — grande para TV */
+    .game-result-modal .modal-content { width: 2800px; padding: 150px; border-radius: 32px; }
+    .game-result-modal h3 { font-size: 3rem; margin-bottom: 28px; }
+    .game-result-modal .result-stats { font-size: 2rem; margin-bottom: 36px; }
+    .modal-buttons { gap: 28px; }
+    .modal-btn { padding: 22px 36px; font-size: 1.7rem; min-width: 240px; min-height: 100px; border-radius: 32px; }
+  
+    /* Modal contador de inicio */
+    .countdown-modal .modal-content { width: 1200px; padding: 80px; border-radius: 32px; }
+    .countdown-number { font-size: 8rem; margin: 28px 0; }
+  
+    footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+    footer p { padding: 20px 150px; border-radius: 24px; }
+  }
+  

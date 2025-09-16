@@ -278,6 +278,32 @@ footer p {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* ---------- Responsive: PANTALLA GRANDE (≈52 pulgadas, 4K) ---------- */
+@media (min-width: 3840px) {
+    html { font-size: 2rem; }
+    .header { text-align: center; margin-bottom: 30px; width: 100%; max-width: 4000px;}
+    .title { font-size: 3.6rem; padding-bottom: 80px;}
+    .controls { gap: 100px; width: 3900px; height: 150px; padding-bottom: 200px;}
+    .size-btn { padding: 45px 100px; font-size: 1.9rem; border-radius: 28px; }
+    .stats { gap: 100px; width: 100%; height: 120px; padding-bottom: 320px;}
+    .stat { padding: 50px 100px; min-width: 180px; }
+    .stat-label { color: var(--secundario-oscuro);font-size: 1.9rem;font-weight: bold;margin-bottom: 50px;}
+    .stat-value { font-size: 2.6rem; }
+    .game-board { gap: 50px; padding: 32px; max-width: 1600px; }
+    .card { width: 230px; height: 230px; }
+    .card-back { font-size: 2.4rem; }
+    .reset-btn {
+        padding: 30px 90px;
+        font-size: 1.8rem;
+        min-height: 60px;
+    }
+    .victory-message { width: 1500px; padding: 90px; }
+    .victory-title { font-size: 3.0rem; }
+    .victory-stats { font-size: 2.0rem; padding: 20px;}
+    footer { bottom: 36px; right: 36px; font-size: 1.2rem; }
+    footer p { padding: 12px 150px; border-radius: 18px; }
+}
+
 /* Responsive Design - Mobile First Approach */
 
 /* Large tablets and small desktops */

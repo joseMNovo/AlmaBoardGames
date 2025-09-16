@@ -193,4 +193,63 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
   .question{ font-size: 1.25rem; }
 }
 
+/* ---------- Responsive: PANTALLA GRANDE (≈52 pulgadas, 4K) ---------- */
+@media (min-width: 3800px) {
+  html { font-size: 2.1rem; }
+
+  .header { max-width: 4200px; margin-bottom: 72px; }
+  .title { font-size: 4.2rem; margin-bottom: 40px; }
+
+  .stats { gap: 80px; margin-bottom: 56px; }
+  .stat { min-width: 320px; padding: 40px 56px; border-radius: 32px; }
+  .stat-label { font-size: 1.8rem; margin-bottom: 14px; }
+  .stat-value { font-size: 3.2rem; }
+
+  .game-container { padding: 72px; max-width: 2200px; border-radius: 38px; }
+
+  .question { font-size: 3.2rem; margin-bottom: 50px;}
+
+  .answers { gap: 40px; max-width: 1600px; grid-template-columns: repeat(2, minmax(360px, 1fr)); }
+  .answer-btn {
+    padding: 32px 52px;
+    font-size: 2.2rem;
+    border-radius: 32px;
+    min-height: 120px;
+    font-weight: 900;
+  }
+
+  .feedback { font-size: 2rem; margin-top: 36px; min-height: 72px; }
+
+  .bottom-buttons { gap: 44px; margin-top: 60px; }
+  .reset-btn {
+    padding: 30px 64px;
+    font-size: 2.1rem;
+    min-height: 110px;
+    border-radius: 34px;
+    font-weight: 900;
+  }
+
+  /* Modal resultados – grande para TV */
+  .results-modal .modal-content {
+    width: 2800px;
+    padding: 150px;
+    border-radius: 32px;
+  }
+  .results-modal h3 { font-size: 3rem; margin-bottom: 28px; }
+  .result-stats { font-size: 2rem; margin-bottom: 36px; }
+  .wrong-list { font-size: 1.6rem; max-height: 50vh; }
+  .modal-buttons { gap: 28px; }
+  .modal-btn {
+    padding: 22px 36px;
+    font-size: 1.7rem;
+    min-width: 240px;
+    min-height: 100px;
+    border-radius: 32px;
+  }
+
+  footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+  footer p { padding: 20px 150px; border-radius: 24px; }
+}
+
+
 

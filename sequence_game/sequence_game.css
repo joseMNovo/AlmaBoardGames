@@ -224,3 +224,62 @@
     }
     .game-container{ max-width: 230px; }
   }
+
+  /* ---------- Responsive: PANTALLA GRANDE (≈52 pulgadas, 4K) ---------- */
+  @media (min-width: 3800px) {
+    html { font-size: 2.1rem; }
+  
+    .header { max-width: 4200px; margin-bottom: 72px; }
+    .title { font-size: 4.2rem; margin-bottom: 40px; }
+  
+    .stats { gap: 60px; margin-bottom: 48px; }
+    .stat { min-width: 700px; padding: 40px 56px; border-radius: 32px; }
+    .stat-label { font-size: 1.8rem; margin-bottom: 16px; }
+    .stat-value { font-size: 3.2rem; }
+  
+    .game-container { padding: 72px; max-width: 2600px; border-radius: 38px; }
+  
+    .subtitle { font-size: 1.9rem; margin-bottom: 24px; }
+  
+    /* Controles de modo (arriba) */
+    .controls.top { gap: 24px; margin-bottom: 36px; }
+    .size-btn {
+      padding: 26px 44px;
+      font-size: 1.9rem;
+      min-height: 96px;
+      border-radius: 32px;
+      font-weight: 900;
+    }
+  
+    /* Grid y fichas */
+    .grid {
+      grid-template-columns: repeat(5, 200px);
+      gap: 26px;
+      justify-content: center;
+      max-width: none;
+      margin: 0 auto 24px;
+    }
+    .tile {
+      font-size: 2.2rem;
+      padding: 28px;
+      min-height: 160px;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.10);
+    }
+  
+    .feedback { font-size: 2rem; min-height: 72px; margin-top: 20px; }
+  
+    /* Botones inferiores */
+    .bottom-buttons { gap: 44px; margin-top: 56px; }
+    .reset-btn {
+      padding: 30px 64px;
+      font-size: 2.1rem;
+      min-height: 110px;
+      border-radius: 34px;
+      font-weight: 900;
+    }
+  
+    footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+    footer p { padding: 20px 150px; border-radius: 24px; }
+  }
+  

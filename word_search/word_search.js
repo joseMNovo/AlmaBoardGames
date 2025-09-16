@@ -290,3 +290,15 @@ document.addEventListener('DOMContentLoaded', () => {
 function resetGame() {
     window.wordSearchGame.resetGame();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('mobile-instructions-modal');
+    const closeBtn = modal?.querySelector('.modal-close-btn');
+  
+    // Mostrar SIEMPRE al cargar (mobile, desktop y 4K)
+    if (modal) modal.classList.add('open');
+  
+    // Cerrar al tocar "Entendido"
+    closeBtn?.addEventListener('click', () => modal.classList.remove('open'));
+  });
+  

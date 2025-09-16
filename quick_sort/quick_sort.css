@@ -253,6 +253,7 @@ body {
     transform: translateY(-2px);
 }
 
+
 /* Feedback */
 .feedback {
     min-height: 24px;
@@ -507,3 +508,32 @@ footer p {
         flex: 1 1 100%;
     }
 }
+
+/* ---------- Responsive: PANTALLA GRANDE (≈52 pulgadas, 4K) ---------- */
+@media (min-width: 3800px) {
+    html { font-size: 2.1rem; }
+    .header { max-width: 4200px; margin-bottom: 72px; }
+    .title { font-size: 4.2rem; margin-bottom: 28px; }
+    .stats { gap: 60px; margin-bottom: 48px; }
+    .stat { min-width: 300px; padding: 36px 52px; border-radius: 32px; }
+    .stat-label { font-size: 1.8rem; }
+    .stat-value { font-size: 3.2rem; }
+    .game-container { padding: 72px; max-width: 3000px; border-radius: 38px; }
+    .segmented {padding: 14px 18px;gap: 16px;border-radius: 28px;margin-bottom: 36px;background: rgba(255,255,255,.45);box-shadow: 0 4px 14px rgba(0,0,0,.06);
+      flex-wrap: wrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .segment {font-size: 1.6rem; padding: 16px 26px; border-radius: 24px;font-weight: 600;}
+    .pool { padding: 44px; border-radius: 32px; margin-bottom: 40px; }
+    .chips { gap: 26px; }
+    .chip {padding: 22px 34px;font-size: 2.0rem;border-radius: 28px;box-shadow: 0 6px 18px rgba(0,0,0,.10);}
+    .classify-buttons { gap: 48px; margin-bottom: 40px; }
+    .btn {padding: 32px 60px;font-size: 2.2rem;border-radius: 36px;min-height: 120px;font-weight: 900;}
+    .feedback { font-size: 2rem; min-height: 72px; margin-top: 20px; }
+    .bottom-buttons { gap: 44px; margin-top: 56px; }
+    .reset-btn {padding: 30px 64px;font-size: 2.1rem;min-height: 110px;border-radius: 34px;}
+    footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+    footer p { padding: 20px 150px; border-radius: 22px; }
+  }
+  

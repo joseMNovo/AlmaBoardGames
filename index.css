@@ -78,61 +78,37 @@ footer p{
 
 /* ---------- Responsive: PANTALLA GRANDE (≈50 pulgadas) ---------- */
 /* Aproximadamente 50 pulgadas equivale a resoluciones de 3840px o más (4K UHD) */
-@media (min-width: 3840px) {
-  html {
-    font-size: 1.9rem;
-  }
-  .container {
-    max-width: 3200px;
-    margin: 0 auto;
-  }
-  .logo {
-    width: 1200px;
-    max-width: 40vw;
-  }
-  .games-scroll {
-    max-height: 700px;
-    font-size: 2.1rem;
-    padding: 24px 24px 12px;
-    border-radius: 32px;
-    box-shadow: 0 8px 40px rgba(0,0,0,.10);
-  }
-  .buttons-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px 32px;
-    padding: 18px 0 12px;
-  }
+@media (min-width: 3800px) {
+  html { font-size: 2.1rem; }
+
+  .container { max-width: 4200px; margin-top: 80px; }
+
+  .logo { width: 1400px; max-width: 45vw; margin-bottom: 100px; }
+
+  .games-card { padding: 80px; border-radius: 40px; }
+
+  .games-title { font-size: 4.4rem; margin-bottom: 60px; text-align: center; }
+
+  .games-scroll { max-height: none; padding: 40px; border-radius: 40px; }
+
+  .buttons-grid { grid-template-columns: repeat(3, 1fr); gap: 80px 3px; }
+
   .game-btn {
-    min-height: 120px;
-    min-width: 480px;
-    max-width: 600px;
-    font-size: 2.2rem;
-    border-radius: 40px;
-    padding: 32px 48px;
+    min-height: 160px;
+    min-width: 1000px;
+    max-width: 700px;
+    font-size: 2.3rem;
+    font-weight: 800;
+    border-radius: 44px;
+    text-align: center;
   }
-  .games-title {
-    font-size: 2.8rem;
-    margin-bottom: 24px;
-  }
-  .hint {
-    font-size: 1.5rem;
-    margin-top: 18px;
-  }
-  .games-card {
-    padding: 48px;
-    border-radius: 32px;
-    background: rgba(255,255,255,.18);
-  }
-  footer {
-    bottom: 40px;
-    right: 40px;
-    font-size: 2rem;
-  }
-  footer p {
-    padding: 18px 32px;
-    border-radius: 28px;
-  }
+
+  .hint { font-size: 1.8rem; margin-top: 40px; text-align: center; opacity: .75; }
+
+  footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
+  footer p { padding: 20px 150px; border-radius: 24px; }
 }
+
 
 /* ---------- Responsive: TABLET ANGOSTA (scroll activado) ---------- */
 @media (max-width: 900px){
