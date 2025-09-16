@@ -7,9 +7,9 @@
   },
   {
     "id":2,
-    "frase": "El Alzheimer es una forma de demencia.",
+    "frase": "El Alzheimer produce de demencia.",
     "respuesta": true,
-    "explicacion": "El Alzheimer es el tipo de demencia más frecuente, aunque no el único."
+    "explicacion": "El Alzheimer es la causa más común de demencia, ya que afecta la memoria y otras funciones cognitivas de forma progresiva."
   },
   {
     "id":3,
