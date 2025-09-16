@@ -20,8 +20,8 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body {
-    font-family: 'Nunito Sans', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    font-family: 'Gotham Rounded', 'Nunito Sans', sans-serif;
+    background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -40,6 +40,7 @@
   }
   
   .title {
+    color: #9A8BC2;
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);

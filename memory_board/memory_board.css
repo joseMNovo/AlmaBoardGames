@@ -20,8 +20,8 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    font-family: 'Gotham Rounded','Gotham Rounded', 'Nunito Sans', sans-serif;
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ body {
 }
 
 .title {
-    color: var(--secundario-oscuro);
+    color: var(--principal-violeta);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -175,7 +175,7 @@ body {
 
 .card-front {
     background: var(--principal-celeste);
-    background-image: url('../img/flor-blanco.png');
+    background-image: url('../statics/img/flor-blanco.png');
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;

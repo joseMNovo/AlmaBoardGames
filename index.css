@@ -1,7 +1,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:'Nunito Sans',sans-serif;
-  background:linear-gradient(135deg,#e0f7fa 0%,#b2ebf2 100%);
+  font-family:'Gotham Rounded', 'Nunito Sans',sans-serif;
+  background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -74,6 +74,64 @@ footer p{
   padding:8px 12px; background:rgba(255,255,255,.35);
   border-radius:14px; backdrop-filter:blur(10px);
   box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+/* ---------- Responsive: PANTALLA GRANDE (≈50 pulgadas) ---------- */
+/* Aproximadamente 50 pulgadas equivale a resoluciones de 3840px o más (4K UHD) */
+@media (min-width: 3840px) {
+  html {
+    font-size: 1.9rem;
+  }
+  .container {
+    max-width: 3200px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 1200px;
+    max-width: 40vw;
+  }
+  .games-scroll {
+    max-height: 700px;
+    font-size: 2.1rem;
+    padding: 24px 24px 12px;
+    border-radius: 32px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.10);
+  }
+  .buttons-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 32px;
+    padding: 18px 0 12px;
+  }
+  .game-btn {
+    min-height: 120px;
+    min-width: 480px;
+    max-width: 600px;
+    font-size: 2.2rem;
+    border-radius: 40px;
+    padding: 32px 48px;
+  }
+  .games-title {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+  }
+  .hint {
+    font-size: 1.5rem;
+    margin-top: 18px;
+  }
+  .games-card {
+    padding: 48px;
+    border-radius: 32px;
+    background: rgba(255,255,255,.18);
+  }
+  footer {
+    bottom: 40px;
+    right: 40px;
+    font-size: 2rem;
+  }
+  footer p {
+    padding: 18px 32px;
+    border-radius: 28px;
+  }
 }
 
 /* ---------- Responsive: TABLET ANGOSTA (scroll activado) ---------- */

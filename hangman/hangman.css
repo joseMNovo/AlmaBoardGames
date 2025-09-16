@@ -21,8 +21,8 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    font-family: 'Gotham Rounded', 'Nunito Sans', sans-serif;
+    background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ body {
 }
 
 .title {
-    color: var(--secundario-oscuro);
+    color: var(--principal-violeta);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -632,137 +632,137 @@ footer p {
     }
 }
 
-    @media (max-width: 360px) {
-        body {
-            padding: 10px;
-        }
-
-        .title {
-            font-size: 1.6rem;
-            margin-bottom: 6px;
-        }
-
-        .subtitle {
-            font-size: 0.9rem;
-        }
-
-        .game-container {
-            padding: 15px;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .hangman-display {
-            padding: 10px;
-            min-height: 100px;
-        }
-
-        .hangman-drawing {
-            font-size: 0.8rem;
-        }
-
-        .word-blanks {
-            font-size: 1.2rem;
-            gap: 3px;
-        }
-
-        .letter-blank {
-            width: 25px;
-            height: 35px;
-            margin: 0 1px;
-        }
-
-        .stats {
-            gap: 10px;
-        }
-
-        .stat {
-            padding: 8px 12px;
-            min-width: 70px;
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-        }
-
-        .stat-value {
-            font-size: 1.2rem;
-        }
-
-            .alphabet-container {
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 2px solid rgba(255, 255, 255, 0.3);
+@media (max-width: 360px) {
+    body {
+        padding: 10px;
     }
 
-        .alphabet-grid {
-            grid-template-columns: repeat(5, 1fr);
-            gap: 4px;
-            max-width: 250px;
-            margin: 0 auto;
-        }
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
 
-        .letter-btn {
-            padding: 8px;
-            font-size: 0.9rem;
-            min-height: 35px;
-            min-width: 35px;
-            border-radius: 6px;
-        }
+    .subtitle {
+        font-size: 0.9rem;
+    }
 
-        .new-game-btn, .reset-btn {
-            padding: 8px 16px;
-            font-size: 0.85rem;
-            min-height: 40px;
-        }
+    .game-container {
+        padding: 15px;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
 
-            .game-status {
+    .hangman-display {
+        padding: 10px;
+        min-height: 100px;
+    }
+
+    .hangman-drawing {
+        font-size: 0.8rem;
+    }
+
+    .word-blanks {
+        font-size: 1.2rem;
+        gap: 3px;
+    }
+
+    .letter-blank {
+        width: 25px;
+        height: 35px;
+        margin: 0 1px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 8px 12px;
+        min-width: 70px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .stat-value {
+        font-size: 1.2rem;
+    }
+
+        .alphabet-container {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+    .alphabet-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .letter-btn {
+        padding: 8px;
+        font-size: 0.9rem;
+        min-height: 35px;
+        min-width: 35px;
+        border-radius: 6px;
+    }
+
+    .new-game-btn, .reset-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
         min-height: 40px;
     }
 
-    #status-message {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-        min-height: 28px;
+        .game-status {
+    min-height: 40px;
+}
+
+#status-message {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    min-height: 28px;
+}
+
+    .game-result-modal .modal-content {
+        padding: 18px;
+        width: 300px;
     }
 
-        .game-result-modal .modal-content {
-            padding: 18px;
-            width: 300px;
-        }
-
-        .game-result-modal h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .game-result-modal .result-stats {
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .modal-btn {
-            padding: 7px 14px;
-            font-size: 0.8rem;
-            min-width: 85px;
-            min-height: 40px;
-        }
-
-        .modal-buttons {
-            gap: 10px;
-        }
-
-        footer {
-            bottom: 8px;
-            right: 8px;
-            font-size: 0.7rem;
-        }
-
-        footer p {
-            padding: 5px 8px;
-            border-radius: 10px;
-        }
+    .game-result-modal h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
     }
+
+    .game-result-modal .result-stats {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .modal-btn {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+        min-width: 85px;
+        min-height: 40px;
+    }
+
+    .modal-buttons {
+        gap: 10px;
+    }
+
+    footer {
+        bottom: 8px;
+        right: 8px;
+        font-size: 0.7rem;
+    }
+
+    footer p {
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+}
 
 /* Landscape orientation for mobile */
 @media (max-height: 500px) and (orientation: landscape) {

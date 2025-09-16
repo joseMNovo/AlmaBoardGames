@@ -1,0 +1,446 @@
+[
+  {
+    "id":1,
+    "frase": "Demencia senil es un diagnóstico médico actual.",
+    "respuesta": false,
+    "explicacion": "Ese término ya no se usa; se habla de Alzheimer u otros tipos de demencia."
+  },
+  {
+    "id":2,
+    "frase": "El Alzheimer es una forma de demencia.",
+    "respuesta": true,
+    "explicacion": "El Alzheimer es el tipo de demencia más frecuente, aunque no el único."
+  },
+  {
+    "id":3,
+    "frase": "Las demencias solo afectan a personas muy ancianas.",
+    "respuesta": false,
+    "explicacion": "También pueden aparecer antes de los 65 años (inicio temprano)."
+  },
+  {
+    "id":4,
+    "frase": "Tener olvidos comunes significa que alguien tiene Alzheimer.",
+    "respuesta": false,
+    "explicacion": "Los olvidos cotidianos no siempre son patológicos ni significan demencia."
+  },
+  {
+    "id":5,
+    "frase": "El Alzheimer es parte normal del envejecimiento.",
+    "respuesta": false,
+    "explicacion": "El envejecimiento normal trae cambios de memoria, pero el Alzheimer es una enfermedad."
+  },
+  {
+    "id":6,
+    "frase": "La demencia afecta solo a la memoria.",
+    "respuesta": false,
+    "explicacion": "También impacta en lenguaje, conducta, emociones y autonomía."
+  },
+  {
+    "id":7,
+    "frase": "El Alzheimer no se puede prevenir de ninguna manera.",
+    "respuesta": false,
+    "explicacion": "No existe prevención absoluta, pero sí factores protectores como hábitos saludables."
+  },
+  {
+    "id":8,
+    "frase": "No hay nada que la familia pueda hacer frente a un diagnóstico de Alzheimer.",
+    "respuesta": false,
+    "explicacion": "La familia y el entorno cumplen un rol clave en la calidad de vida."
+  },
+  {
+    "id":9,
+    "frase": "El Alzheimer solo se diagnostica cuando la persona ya perdió toda autonomía.",
+    "respuesta": false,
+    "explicacion": "Puede diagnosticarse en etapas iniciales y planificar cuidados."
+  },
+  {
+    "id":10,
+    "frase": "Las personas con demencia siempre se olvidan de todo de un día para el otro.",
+    "respuesta": false,
+    "explicacion": "El Alzheimer es progresivo; no implica un olvido repentino absoluto."
+  },
+  {
+    "id":11,
+    "frase": "Un diagnóstico temprano de Alzheimer permite planificar mejor los cuidados.",
+    "respuesta": true,
+    "explicacion": "Detectarlo a tiempo ayuda a preparar tratamientos y acompañamiento."
+  },
+  {
+    "id":12,
+    "frase": "Las demencias afectan también a las familias y cuidadores.",
+    "respuesta": true,
+    "explicacion": "El impacto emocional y práctico alcanza a todo el entorno."
+  },
+  {
+    "id":13,
+    "frase": "El Alzheimer no tiene cura, pero existen tratamientos que mejoran la calidad de vida.",
+    "respuesta": true,
+    "explicacion": "Los tratamientos pueden aliviar síntomas y mejorar la autonomía."
+  },
+  {
+    "id":14,
+    "frase": "Todas las personas con Alzheimer terminan igual.",
+    "respuesta": false,
+    "explicacion": "La evolución y los síntomas son diferentes en cada persona."
+  },
+  {
+    "id":15,
+    "frase": "La estimulación cognitiva y social puede ayudar a enlentecer el avance de la demencia.",
+    "respuesta": true,
+    "explicacion": "La actividad mental y social es un factor protector."
+  },
+  {
+    "id":16,
+    "frase": "Las personas con demencia no entienden nada de lo que pasa a su alrededor.",
+    "respuesta": false,
+    "explicacion": "Conservan capacidades emocionales y de conexión significativa."
+  },
+  {
+    "id":17,
+    "frase": "El Alzheimer solo afecta a la memoria, no a la conducta o emociones.",
+    "respuesta": false,
+    "explicacion": "También cambia la conducta, el ánimo y las emociones."
+  },
+  {
+    "id":18,
+    "frase": "Hablar abiertamente de la demencia ayuda a reducir prejuicios y estigmas.",
+    "respuesta": true,
+    "explicacion": "Visibilizar el tema genera comprensión y menos discriminación."
+  },
+  {
+    "id":19,
+    "frase": "Solo los médicos neurólogos pueden detectar señales tempranas de demencia.",
+    "respuesta": false,
+    "explicacion": "Otros profesionales de salud también pueden detectar signos iniciales."
+  },
+  {
+    "id":20,
+    "frase": "Mantener una vida social activa puede proteger la salud cerebral.",
+    "respuesta": true,
+    "explicacion": "La interacción social es un factor protector reconocido."
+  },
+  {
+    "id":21,
+    "frase": "Una persona con demencia puede seguir disfrutando de la música y el arte.",
+    "respuesta": true,
+    "explicacion": "El arte y la música generan placer y conexión emocional."
+  },
+  {
+    "id":22,
+    "frase": "El estrés crónico puede aumentar el riesgo de deterioro cognitivo.",
+    "respuesta": true,
+    "explicacion": "El estrés mantenido daña al cerebro y favorece problemas de memoria."
+  },
+  {
+    "id":23,
+    "frase": "El Alzheimer siempre se hereda de los padres.",
+    "respuesta": false,
+    "explicacion": "Solo un pequeño porcentaje es genético determinista."
+  },
+  {
+    "id":24,
+    "frase": "Dormir bien es importante para cuidar la memoria y prevenir deterioro.",
+    "respuesta": true,
+    "explicacion": "El sueño profundo ayuda al cerebro a recuperarse y consolidar memoria."
+  },
+  {
+    "id":25,
+    "frase": "La depresión en la vejez nunca se confunde con síntomas de demencia.",
+    "respuesta": false,
+    "explicacion": "La depresión puede parecer un deterioro cognitivo y debe evaluarse."
+  },
+  {
+    "id":26,
+    "frase": "La actividad física regular beneficia tanto al corazón como al cerebro.",
+    "respuesta": true,
+    "explicacion": "El ejercicio mejora la circulación y protege la función cognitiva."
+  },
+  {
+    "id":27,
+    "frase": "El Alzheimer afecta únicamente a las personas de países desarrollados.",
+    "respuesta": false,
+    "explicacion": "Es una enfermedad global, presente en todo el mundo."
+  },
+  {
+    "id":28,
+    "frase": "Las personas con Alzheimer son como niños grandes y deben ser tratados así.",
+    "respuesta": false,
+    "explicacion": "Son adultos con historia e identidad, merecen respeto."
+  },
+  {
+    "id":29,
+    "frase": "El Alzheimer siempre se acompaña de conductas agresivas.",
+    "respuesta": false,
+    "explicacion": "No todas las personas desarrollan agresividad."
+  },
+  {
+    "id":30,
+    "frase": "La demencia borra la identidad de la persona por completo.",
+    "respuesta": false,
+    "explicacion": "La persona mantiene rasgos de su identidad y emociones."
+  },
+  {
+    "id":31,
+    "frase": "Es inútil hablar o conversar con alguien que tiene Alzheimer.",
+    "respuesta": false,
+    "explicacion": "La comunicación sigue siendo significativa aunque cambie la respuesta."
+  },
+  {
+    "id":32,
+    "frase": "Los cuidadores no necesitan apoyo emocional porque solo están ayudando.",
+    "respuesta": false,
+    "explicacion": "El cuidado puede generar estrés y requiere apoyo."
+  },
+  {
+    "id":33,
+    "frase": "Todas las demencias avanzan al mismo ritmo y de la misma manera.",
+    "respuesta": false,
+    "explicacion": "Cada persona tiene una evolución distinta."
+  },
+  {
+    "id":34,
+    "frase": "La memoria emocional puede permanecer activa aun en fases avanzadas de Alzheimer.",
+    "respuesta": true,
+    "explicacion": "Las emociones suelen conservarse más que los recuerdos."
+  },
+  {
+    "id":35,
+    "frase": "La demencia significa perder totalmente la dignidad.",
+    "respuesta": false,
+    "explicacion": "La dignidad no se pierde; depende del trato y el acompañamiento."
+  },
+  {
+    "id":36,
+    "frase": "El Alzheimer es contagioso.",
+    "respuesta": false,
+    "explicacion": "No se transmite entre personas."
+  },
+  {
+    "id":37,
+    "frase": "Si alguien tiene demencia, ya no tiene nada que aportar a la sociedad.",
+    "respuesta": false,
+    "explicacion": "Pueden seguir compartiendo afecto, historias y momentos."
+  },
+  {
+    "id":38,
+    "frase": "Las personas con demencia siempre deben estar medicadas con sedantes.",
+    "respuesta": false,
+    "explicacion": "No es cierto; se prioriza un tratamiento integral y humano."
+  },
+  {
+    "id":39,
+    "frase": "La demencia solo afecta a la persona que la padece, no a su entorno.",
+    "respuesta": false,
+    "explicacion": "El impacto se extiende a la familia y cuidadores."
+  },
+  {
+    "id":40,
+    "frase": "Las personas con Alzheimer no pueden expresar cariño ni afecto.",
+    "respuesta": false,
+    "explicacion": "Siguen siendo capaces de demostrar emociones."
+  },
+  {
+    "id":41,
+    "frase": "La demencia significa que la persona ya no puede disfrutar de actividades simples como pasear o escuchar música.",
+    "respuesta": false,
+    "explicacion": "Las actividades simples siguen siendo placenteras."
+  },
+  {
+    "id":42,
+    "frase": "La demencia borra todos los recuerdos de inmediato.",
+    "respuesta": false,
+    "explicacion": "El deterioro es progresivo, no inmediato."
+  },
+  {
+    "id":43,
+    "frase": "Hablar abierta y públicamente sobre el Alzheimer ayuda a reducir la discriminación.",
+    "respuesta": true,
+    "explicacion": "Visibilizar la enfermedad genera conciencia social."
+  },
+  {
+    "id":44,
+    "frase": "El Alzheimer es siempre culpa de no haber usado la mente lo suficiente.",
+    "respuesta": false,
+    "explicacion": "Es multifactorial: edad, genética, estilo de vida y salud influyen."
+  },
+  {
+    "id":45,
+    "frase": "Una persona con demencia no puede sentir vergüenza o tristeza.",
+    "respuesta": false,
+    "explicacion": "Siguen experimentando un amplio rango de emociones."
+  },
+  {
+    "id":46,
+    "frase": "Todas las demencias son iguales.",
+    "respuesta": false,
+    "explicacion": "Existen varios tipos con síntomas y causas diferentes."
+  },
+  {
+    "id":47,
+    "frase": "Los problemas de memoria en la vejez siempre son demencia.",
+    "respuesta": false,
+    "explicacion": "No todos los olvidos son patológicos."
+  },
+  {
+    "id":48,
+    "frase": "Una persona con Alzheimer no puede tener momentos de lucidez.",
+    "respuesta": false,
+    "explicacion": "Muchas veces conservan momentos de claridad."
+  },
+  {
+    "id":49,
+    "frase": "El cuidado de alguien con demencia es tarea exclusiva de las mujeres.",
+    "respuesta": false,
+    "explicacion": "El cuidado es una responsabilidad compartida."
+  },
+  {
+    "id":50,
+    "frase": "Las personas con demencia no pueden reír ni disfrutar del humor.",
+    "respuesta": false,
+    "explicacion": "El sentido del humor puede permanecer vivo."
+  },
+  {
+    "id":51,
+    "frase": "El Alzheimer se puede detectar con una única prueba de memoria.",
+    "respuesta": false,
+    "explicacion": "Se necesitan varias pruebas y evaluaciones clínicas."
+  },
+  {
+    "id":52,
+    "frase": "El diagnóstico de demencia significa que ya no tiene sentido estimular a la persona.",
+    "respuesta": false,
+    "explicacion": "La estimulación mantiene habilidades y mejora la calidad de vida."
+  },
+  {
+    "id":53,
+    "frase": "Hablar con respeto y paciencia favorece la comunicación con alguien que tiene Alzheimer.",
+    "respuesta": true,
+    "explicacion": "Un trato respetuoso facilita la conexión."
+  },
+  {
+    "id":54,
+    "frase": "Una dieta equilibrada y saludable contribuye a la salud cerebral.",
+    "respuesta": true,
+    "explicacion": "La alimentación adecuada protege el cerebro."
+  },
+  {
+    "id":55,
+    "frase": "El contacto físico afectuoso, como una caricia o un abrazo, sigue siendo significativo en la demencia.",
+    "respuesta": true,
+    "explicacion": "El afecto físico transmite seguridad y amor."
+  },
+  {
+    "id":56,
+    "frase": "El arte y las manualidades estimulan la creatividad incluso en personas con deterioro cognitivo.",
+    "respuesta": true,
+    "explicacion": "Las actividades creativas fortalecen la autoestima y expresión."
+  },
+  {
+    "id":57,
+    "frase": "Los juegos de memoria y las actividades cognitivas ayudan a mantener funciones mentales activas.",
+    "respuesta": true,
+    "explicacion": "Ejercitar la mente ayuda a conservar habilidades."
+  },
+  {
+    "id":58,
+    "frase": "El acompañamiento psicológico puede mejorar la calidad de vida de la familia y de la persona con demencia.",
+    "respuesta": true,
+    "explicacion": "El apoyo profesional brinda alivio y orientación."
+  },
+  {
+    "id":59,
+    "frase": "La sonrisa y el buen humor del entorno influyen positivamente en la persona con Alzheimer.",
+    "respuesta": true,
+    "explicacion": "Un ambiente positivo mejora el ánimo."
+  },
+  {
+    "id":60,
+    "frase": "Mantener rutinas diarias claras y predecibles ayuda a reducir la ansiedad en quienes tienen demencia.",
+    "respuesta": true,
+    "explicacion": "Las rutinas dan seguridad y reducen la confusión."
+  },
+  {
+    "id":61,
+    "frase": "La lectura frecuente estimula la mente y es una de las maneras de prevenir el deterioro cognitivo.",
+    "respuesta": true,
+    "explicacion": "Leer ejercita la memoria y concentración."
+  },
+  {
+    "id":62,
+    "frase": "El acompañamiento de mascotas puede mejorar el estado de ánimo en personas con demencia.",
+    "respuesta": true,
+    "explicacion": "Los animales brindan compañía y bienestar emocional."
+  },
+  {
+    "id":63,
+    "frase": "Mantener la presión arterial controlada protege también la salud cerebral.",
+    "respuesta": true,
+    "explicacion": "La salud vascular está ligada a la memoria."
+  },
+  {
+    "id":64,
+    "frase": "La fisioterapia y el movimiento adaptado pueden mejorar la autonomía de las personas con Alzheimer.",
+    "respuesta": true,
+    "explicacion": "El movimiento ayuda a mantener independencia."
+  },
+  {
+    "id":65,
+    "frase": "Los cuidadores capacitados logran reducir el estrés y mejorar el vínculo con la persona con demencia.",
+    "respuesta": true,
+    "explicacion": "La capacitación mejora el cuidado y la relación."
+  },
+  {
+    "id":66,
+    "frase": "La tecnología puede ser una aliada para apoyar la memoria y la rutina.",
+    "respuesta": true,
+    "explicacion": "Recordatorios y apps ayudan en la organización."
+  },
+  {
+    "id":67,
+    "frase": "Las personas con Alzheimer pueden mantener habilidades sociales incluso en fases avanzadas.",
+    "respuesta": true,
+    "explicacion": "Pueden seguir saludando, agradeciendo y mostrando afecto."
+  },
+  {
+    "id":68,
+    "frase": "Mantener horarios regulares de sueño ayuda a reducir la desorientación en personas con Alzheimer.",
+    "respuesta": true,
+    "explicacion": "El buen descanso reduce la confusión."
+  },
+  {
+    "id":69,
+    "frase": "Adaptar la casa con buena iluminación y señalización puede prevenir accidentes en personas con demencia.",
+    "respuesta": true,
+    "explicacion": "Un entorno adaptado disminuye riesgos."
+  },
+  {
+    "id":70,
+    "frase": "La participación en actividades cotidianas simples, como poner la mesa, favorece la autonomía.",
+    "respuesta": true,
+    "explicacion": "Involucrar en tareas simples mantiene independencia."
+  },
+  {
+    "id":71,
+    "frase": "Escuchar y validar las emociones de una persona con demencia mejora su bienestar.",
+    "respuesta": true,
+    "explicacion": "Las personas con Alzheimer siguen sintiendo emociones como cualquier otra persona."
+  },
+  {
+    "id":72,
+    "frase": "Los chequeos médicos regulares permiten detectar complicaciones asociadas a la demencia.",
+    "respuesta": true,
+    "explicacion": "Un seguimiento médico ayuda a controlar la salud general."
+  },
+  {
+    "id":73,
+    "frase": "Un entorno tranquilo y sin ruidos excesivos facilita la comunicación.",
+    "respuesta": true,
+    "explicacion": "Un ambiente calmado ayuda a concentrarse y expresarse mejor."
+  },
+  {
+    "id":74,
+    "frase": "Involucrar a la persona en decisiones sencillas fortalece su autoestima.",
+    "respuesta": true,
+    "explicacion": "La participación mantiene la autonomía y dignidad."
+  }
+]

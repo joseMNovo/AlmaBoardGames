@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✅ Verdadero o falso</title>
+
+  <link rel="stylesheet" href="true_or_false.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../statics/img/flor-juegos.png">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">✅ Verdadero o falso</h1>
+
+    <div class="stats" role="group" aria-label="Estadísticas del juego">
+      <div class="stat">
+        <div class="stat-label">Tiempo</div>
+        <div class="stat-value" id="time-left">20</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Correctas</div>
+        <div class="stat-value" id="correct-count">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Respondidas</div>
+        <div class="stat-value" id="answered-count">0</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="game-container" role="region" aria-labelledby="game-title">
+    <p id="question-text" class="question" aria-live="polite">Cargando…</p>
+
+    <div class="answers" role="group" aria-label="Respuestas">
+      <button id="btn-true" class="answer-btn true">Verdadero</button>
+      <button id="btn-false" class="answer-btn false">Falso</button>
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite"></div>
+  </main>
+
+  <div class="bottom-buttons">
+    <a class="reset-btn" href="../index.html">← Volver</a>
+    <button id="reset-btn" class="reset-btn">Volver a jugar</button>
+  </div>
+
+  <!-- Modal de resultados -->
+  <div class="results-modal" id="results-modal" aria-modal="true" role="dialog">
+    <div class="modal-content">
+      <h3>Resultado</h3>
+      <div class="result-stats" id="result-stats"></div>
+      <div class="wrong-list" id="wrong-list"></div>
+      <div class="modal-buttons">
+        <a class="modal-btn secondary" href="../index.html">← Volver</a>
+        <button class="modal-btn primary" id="play-again-btn">Jugar de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Alma Rosario - 2025</p>
+  </footer>
+
+  <script src="true_or_false.js"></script>
+</body>
+</html>
+
+
