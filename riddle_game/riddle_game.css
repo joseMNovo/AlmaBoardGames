@@ -16,6 +16,7 @@
     font-family:'Gotham Rounded', 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
     min-height:100vh;
+    min-height:100svh;
     display:flex;
     flex-direction:column;
     align-items:center;
