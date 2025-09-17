@@ -23,7 +23,7 @@ body {
     font-family: 'Gotham Rounded','Gotham Rounded', 'Nunito Sans', sans-serif;
     background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
     min-height: 100vh;
-    min-height: 100svh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
