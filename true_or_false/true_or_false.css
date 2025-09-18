@@ -19,6 +19,7 @@ body {
   font-family: 'Gotham Rounded', 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background:linear-gradient(135deg,#fff 0%,#e0e0e0 100%);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +161,7 @@ body {
 }
 .modal-content h3{ font-size: 1.6rem; margin-bottom: 10px; font-weight: 900; color: var(--text); }
 .result-stats{ color: #333; font-weight: 800; margin-bottom: 12px; }
-.wrong-list{ color: #333; max-height: 45vh; overflow: auto; padding-right: 6px; }
+.wrong-list{ color: #333; max-height: 45vh;;max-height: 45dvh; overflow: auto; padding-right: 6px; }
 .wrong-item{ background: #fff; border-left: 4px solid var(--err); padding: 10px 12px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
 .wrong-item .phrase{ font-weight: 900; margin-bottom: 4px; }
 .wrong-item .explanation{ opacity: .9; }
@@ -237,7 +238,7 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
   }
   .results-modal h3 { font-size: 3rem; margin-bottom: 28px; }
   .result-stats { font-size: 2rem; margin-bottom: 36px; }
-  .wrong-list { font-size: 1.6rem; max-height: 50vh; }
+  .wrong-list { font-size: 1.6rem; max-height: 50vh;max-height: 50dvh; }
   .modal-buttons { gap: 28px; }
   .modal-btn {
     padding: 22px 36px;
