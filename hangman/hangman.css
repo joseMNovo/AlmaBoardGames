@@ -865,6 +865,7 @@ footer p {
   
     footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
     footer p { padding: 20px 32px; border-radius: 28px; }
+    .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
 }
 
 /* ---------- Responsive: 2160 x 3800 (pantalla 4K vertical) ---------- */
@@ -933,7 +934,6 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.6vh 1.7vw; /* achicado un poquito */
         margin: 0 auto 1.8vh; /* achicado un poquito */
         border-radius: 28px;
         max-width: 1400px;
@@ -1041,10 +1041,18 @@ footer p {
         bottom: 2vh;
         z-index: 10;
         font-size: clamp(1rem, 1.6vh, 2rem); /* achicado un poquito */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: row-reverse;
     }
     footer p {
         padding: 1vh 1.2vw; /* achicado un poquito */
         border-radius: 14px;
         z-index: 0;
     }
+    .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
+
 }

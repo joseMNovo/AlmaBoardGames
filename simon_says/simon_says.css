@@ -856,8 +856,9 @@ footer p {
     .countdown-modal .modal-content { width: 1200px; padding: 100px; border-radius: 36px; }
     .countdown-number { font-size: 10rem; margin: 40px 0; }
 
-    footer { bottom: 64px; right: 64px; font-size: 2.2rem; }
+    footer { bottom: 64px; right: 64px; font-size: 2.2rem; display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 0 auto; flex-direction: row-reverse; }
     footer p { padding: 32px 120px; border-radius: 32px; }
+    .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh ); }
 }
 
 /* ----------- TV/UltraWide (superior a 3800px) ----------- */

@@ -248,6 +248,8 @@ footer p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
+
 /* Responsive */
 @media (max-width: 900px) {
   .grid {
@@ -687,6 +689,13 @@ footer p {
     font-size: clamp(1.8rem, 2.5vw, 3rem);
     margin-top: 0;
     padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
   }
 
   footer p {

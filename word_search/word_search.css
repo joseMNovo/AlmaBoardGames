@@ -1167,11 +1167,18 @@ footer p {
     footer{
       position: fixed; right: 2vw; bottom: 2vh; z-index: 10;
       font-size: clamp(.9rem, 1.6vh, 3.4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-direction: row-reverse;
     }
     footer p{ padding: 1.2vh 1.4vw; border-radius: 14px; }
   
     .watermark{ position: fixed; left: 2vw; bottom: 2vh; z-index: 10; }
-    .watermark-logo{ height: clamp(32px, 3.4vh, 72px); }
+    .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
   
     /* ---------- Modal grande y legible ---------- */
     .mobile-instructions-modal{

@@ -335,6 +335,12 @@ footer p{
     position: fixed; right: 2vw; bottom: 2vh; /* mobile: bottom/right 10px */
     font-size: clamp(.9rem, 1.6vh, 3.4rem);
     z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Cambiado de justify-content a flex-direction */
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
   }
   footer p{ padding: 1.2vh 1.4vw; border-radius: 16px; }
 
@@ -342,7 +348,7 @@ footer p{
     position: fixed; left: 2vw; bottom: 2vh;  /* mobile: bottom/left 10px */
     z-index: 2;
   }
-  .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
+  .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); padding-right: 200px;}
 
   /* 5) Quitar límites que achican en TV */
   .container, .content, .wrapper{

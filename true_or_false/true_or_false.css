@@ -622,6 +622,13 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
     font-size: clamp(1.8rem, 2.5vw, 3rem);
     margin-top: 0;
     padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   footer p {
@@ -638,6 +645,8 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
   }
+
+  .watermark-logo{ height: clamp(28px, 4.2vh, 4.2vh); }
 }
 
 
