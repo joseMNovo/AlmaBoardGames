@@ -436,17 +436,20 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
     flex-direction: column;
     align-items: center;
     gap: 3vh;
-    margin: 0 auto;
+    padding-bottom: 200px;
     width: 100%;
     max-width: 1200px;
     flex-shrink: 0;
+    padding-bottom: 200px;
   }
 
   .reset-btn {
+    z-index: 1;
+    padding: 0 0 0 0;
     background: var(--orange);
     color: #fff;
     border: none;
-    padding: 2.5vh 0;
+    padding: 1.0vh 0;
     border-radius: 28px;
     font-weight: 900;
     cursor: pointer;
@@ -455,6 +458,7 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
     box-shadow: 0 4px 20px rgba(255, 112, 67, 0.3);
     min-height: clamp(70px, 6vh, 100px);
     width: 100%;
+    z-index: 1;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -621,7 +625,6 @@ footer p{ margin:0; padding:8px 12px; background: rgba(255,255,255,.35); border-
   }
 
   footer p {
-    padding: 2.5vh 8vw;
     border-radius: 28px;
     line-height: 1;
     font-size: clamp(2rem, 2.8vw, 3.5rem);

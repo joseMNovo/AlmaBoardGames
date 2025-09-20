@@ -979,6 +979,8 @@ footer p {
         align-items: center;
         gap: 1.4vh; /* achicado un poquito */
         margin: 0 auto 0.7vh; /* achicado un poquito */
+        padding-bottom: 200px;
+        z-index: 1;
     }
     .reset-btn, .new-game-btn, .modal-btn {
         min-width: min(82vw, 720px);
@@ -986,6 +988,11 @@ footer p {
         font-size: clamp(1.6rem, 2.1vh, 3.6rem); /* achicado un poquito */
         padding: 1.4vh 1.8vw; /* achicado un poquito */
         border-radius: 22px;
+    }
+
+    .reset-btn {
+        z-index: 1;
+        padding: 0 0 0 0;
     }
 
     /* Estado del juego */
@@ -1038,5 +1045,6 @@ footer p {
     footer p {
         padding: 1vh 1.2vw; /* achicado un poquito */
         border-radius: 14px;
+        z-index: 0;
     }
 }

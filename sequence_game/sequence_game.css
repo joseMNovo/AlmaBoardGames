@@ -644,6 +644,7 @@ footer p {
     width: 100%;
     max-width: 1200px;
     flex-shrink: 0;
+    padding-bottom: 200px;
   }
 
   .reset-btn,
@@ -661,6 +662,11 @@ footer p {
     box-shadow: 0 4px 20px rgba(255, 112, 67, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
+  }
+
+  .reset-btn {
+    z-index: 1;
+    padding: 1.0vh 0;
   }
 
   .reset-btn:hover,
@@ -684,7 +690,6 @@ footer p {
   }
 
   footer p {
-    padding: 2.5vh 8vw;
     border-radius: 28px;
     line-height: 1;
     font-size: clamp(2rem, 2.8vw, 3.5rem);
