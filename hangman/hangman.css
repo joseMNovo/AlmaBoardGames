@@ -690,11 +690,11 @@ footer p {
         font-size: 1.2rem;
     }
 
-        .alphabet-container {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-}
+    .alphabet-container {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+    }
 
     .alphabet-grid {
         grid-template-columns: repeat(5, 1fr);
@@ -717,15 +717,15 @@ footer p {
         min-height: 40px;
     }
 
-        .game-status {
-    min-height: 40px;
-}
+    .game-status {
+        min-height: 40px;
+    }
 
-#status-message {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    min-height: 28px;
-}
+    #status-message {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        min-height: 28px;
+    }
 
     .game-result-modal .modal-content {
         padding: 18px;
@@ -865,6 +865,178 @@ footer p {
   
     footer { bottom: 48px; right: 48px; font-size: 1.6rem; }
     footer p { padding: 20px 32px; border-radius: 28px; }
-  }
-  
-  
+}
+
+/* ---------- Responsive: 2160 x 3800 (pantalla 4K vertical) ---------- */
+@media (max-width: 2160px) and (min-height: 3800px) {
+    html, body { height: 100dvh; overflow: hidden; }
+    body { padding: 0; }
+
+    /* Header grande */
+    .header {
+        max-width: 1300px;
+        margin-bottom: 2.6vh; /* achicado un poquito */
+    }
+
+    .title {
+        font-size: clamp(3.2rem, 4vh, 7.2rem); /* achicado un poquito */
+        line-height: 1.08; /* achicado un poquito */
+        text-align: center;
+        margin: 0.8vh 0 2vh; /* achicado un poquito */
+    }
+
+    .subtitle {
+        font-size: clamp(1.2rem, 1.8vh, 3.2rem); /* achicado un poquito */
+    }
+
+    /* Palabra a adivinar */
+    .word-display {
+        width: min(92vw, 1300px);
+        margin: 0 auto 1.8vh; /* achicado un poquito */
+        padding: 2.8vh 2.7vw; /* achicado un poquito */
+        border-radius: 28px;
+    }
+    .word-blanks {
+        font-size: clamp(2.2rem, 2.8vh, 5rem); /* achicado un poquito */
+        gap: 1.7vh; /* achicado un poquito */
+    }
+    .letter-blank {
+        width: clamp(48px, 5.5vw, 105px); /* achicado un poquito */
+        height: clamp(60px, 7.2vh, 130px); /* achicado un poquito */
+        border-bottom-width: 6px; /* achicado un poquito */
+        margin: 0 0.7vw; /* achicado un poquito */
+    }
+
+    /* Stats compactas y legibles */
+    .stats {
+        width: min(92vw, 1300px);
+        margin: 0 auto 1.8vh; /* achicado un poquito */
+        gap: 2.2vh; /* achicado un poquito */
+        justify-content: center;
+    }
+    .stat {
+        padding: 2.2vh 2.4vw; /* achicado un poquito */
+        border-radius: 24px;
+        min-width: 220px;
+    }
+    .stat-label {
+        font-size: clamp(1.2rem, 1.8vh, 3.2rem); /* achicado un poquito */
+        margin-bottom: 0.8vh; /* achicado un poquito */
+    }
+    .stat-value {
+        font-size: clamp(1.8rem, 2.7vh, 4.2rem); /* achicado un poquito */
+    }
+
+    /* Tablero principal */
+    .game-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.6vh 1.7vw; /* achicado un poquito */
+        margin: 0 auto 1.8vh; /* achicado un poquito */
+        border-radius: 28px;
+        max-width: 1400px;
+        gap: 2.7vh; /* achicado un poquito */
+    }
+
+    .hangman-display {
+        max-width: 600px;
+        min-height: 380px; /* achicado un poquito */
+        padding: 36px; /* achicado un poquito */
+        border-radius: 32px;
+    }
+    .hangman-drawing {
+        font-size: clamp(2.2rem, 2.8vh, 4.8rem); /* achicado un poquito */
+        line-height: 1.7; /* achicado un poquito */
+    }
+
+    /* Alfabeto */
+    .alphabet-container {
+        max-width: 1300px;
+        padding-top: 2.7vh; /* achicado un poquito */
+        margin-top: 1.8vh; /* achicado un poquito */
+        border-top: 3px solid rgba(255,255,255,0.4);
+    }
+    .alphabet-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 1.7vh; /* achicado un poquito */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .letter-btn {
+        padding: 1.8vh 0; /* achicado un poquito */
+        font-size: clamp(2rem, 2.7vh, 4rem); /* achicado un poquito */
+        min-height: clamp(68px, 5vh, 130px); /* achicado un poquito */
+        min-width: clamp(68px, 5vh, 130px); /* achicado un poquito */
+        border-radius: 22px;
+    }
+
+    /* Botones grandes y cómodos */
+    .bottom-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.4vh; /* achicado un poquito */
+        margin: 0 auto 0.7vh; /* achicado un poquito */
+    }
+    .reset-btn, .new-game-btn, .modal-btn {
+        min-width: min(82vw, 720px);
+        min-height: clamp(68px, 5vh, 130px); /* achicado un poquito */
+        font-size: clamp(1.6rem, 2.1vh, 3.6rem); /* achicado un poquito */
+        padding: 1.4vh 1.8vw; /* achicado un poquito */
+        border-radius: 22px;
+    }
+
+    /* Estado del juego */
+    .game-status {
+        min-height: 70px; /* achicado un poquito */
+    }
+    #status-message {
+        font-size: clamp(1.4rem, 2vh, 3rem); /* achicado un poquito */
+        padding: 1.8vh 2.2vw; /* achicado un poquito */
+        min-height: 52px; /* achicado un poquito */
+        border-radius: 18px;
+    }
+
+    /* Modal resultado */
+    .game-result-modal .modal-content {
+        width: min(92vw, 1400px);
+        max-width: 1400px;
+        padding: 4vh 3vw; /* achicado un poquito */
+        border-radius: 32px;
+        box-shadow: 0 24px 80px rgba(0,0,0,.22);
+        text-align: center;
+    }
+    .game-result-modal h3 {
+        font-size: clamp(2.6rem, 3.5vh, 5rem); /* achicado un poquito */
+        margin-bottom: 1.8vh; /* achicado un poquito */
+    }
+    .game-result-modal .result-stats {
+        font-size: clamp(1.8rem, 2.7vh, 3rem); /* achicado un poquito */
+        margin-bottom: 2.2vh; /* achicado un poquito */
+    }
+    .modal-buttons {
+        gap: 1.7vh; /* achicado un poquito */
+    }
+    .modal-btn {
+        font-size: clamp(1.6rem, 2.1vh, 3.6rem); /* achicado un poquito */
+        min-width: min(82vw, 720px);
+        min-height: clamp(68px, 5vh, 130px); /* achicado un poquito */
+        padding: 1.4vh 1.8vw; /* achicado un poquito */
+        border-radius: 22px;
+    }
+
+    /* Footer fijo abajo, discreto */
+    footer {
+        position: fixed;
+        right: 2vw;
+        bottom: 2vh;
+        z-index: 10;
+        font-size: clamp(1rem, 1.6vh, 2rem); /* achicado un poquito */
+    }
+    footer p {
+        padding: 1vh 1.2vw; /* achicado un poquito */
+        border-radius: 14px;
+    }
+}

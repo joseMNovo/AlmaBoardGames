@@ -918,64 +918,7 @@ footer p {
 }
 
 /* —— Desktop (≥1160px): tablero | palabras —— */
-@media (min-width: 1160px) {
-    .ws-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 480px;
-        /* izquierda: tablero | derecha: palabras */
-        grid-template-areas:
-            "header  header"
-            "stats   stats"
-            "board   words"
-            "buttons words";
-        column-gap: 28px;
-        row-gap: 24px;
-        align-items: start;
-    }
 
-    .header {
-        grid-area: header;
-    }
-
-    .stats {
-        grid-area: stats;
-        justify-content: center;
-    }
-
-    .game-container {
-        grid-area: board;
-    }
-
-    .words-container {
-        grid-area: words;
-        align-self: start;
-    }
-
-    .bottom-buttons {
-        justify-self: center;
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-left: 500px;
-    }
-
-    /* Ancho homogéneo de la columna izquierda para alinear stats/board/botones */
-    .stats,
-    .game-container {
-        width: 100%;
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .title {
-        color: var(--principal-violeta);
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-left: 400px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-}
 
 @media (min-width: 3800px) {
     html {
@@ -1123,3 +1066,187 @@ footer p {
         border-radius: 32px;
     }
 }
+
+/* TV táctil vertical 1200×3800: centrado, letras grandes y sin desborde */
+@media (max-width: 2160px) and (min-height: 3800px){
+    /* Pantalla completa, sin scroll raro */
+    html, body{ height: 100dvh; overflow: hidden; }
+    body{ padding: 0; }
+  
+    /* Zonas: header ↑ / contenido ↕ / footer ↓ */
+    .ws-layout{
+      min-height: 100dvh; width: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between;
+      padding: 3vh 0 2vh; gap: 0;
+    }
+  
+    /* Título bien grande */
+    .title{
+      font-size: clamp(3.2rem, 4.2vh, 7.2rem);
+      line-height: 1.1; text-align: center;
+      margin: 1vh 0 2.4vh;
+    }
+  
+    /* Palabras a encontrar: más ancho y tipografía mayor */
+    .words-container{
+      width: min(92vw, 1300px);
+      margin: 0 auto 2.2vh;
+      padding: 3.2vh 3vw;
+      border-radius: 28px;
+    }
+    .words-title{ font-size: clamp(1.8rem, 2.6vh, 4.4rem); }
+    .words-list { gap: 2vh; font-size: clamp(1.4rem, 2.2vh, 3.6rem); }
+  
+    /* Stats compactas y legibles */
+    .stats{
+      width: min(92vw, 1300px);
+      margin: 0 auto 2.2vh; gap: 2.6vh; justify-content: center;
+    }
+    .stat{ padding: 2.6vh 2.8vw; border-radius: 24px; }
+    .stat-label{ font-size: clamp(1.2rem, 2vh, 3.4rem); }
+    .stat-value{ font-size: clamp(1.8rem, 3vh, 4.6rem); }
+
+    #status-message{
+      font-size: clamp(2.2rem, 3.5vh, 5.2rem);
+    }
+  
+    /* ---------- TABLERO (clave) ---------- */
+    .game-container{
+      width: 100%;
+      display: flex; justify-content: center; align-items: center;
+      padding: 2vh 2vw; margin: 0 auto 2.2vh; border-radius: 28px;
+    }
+  
+    .grid{
+      /* Tablero MUCHO más grande.
+         - 96vw: casi todo el ancho
+         - 82vh: alto grande sin pisar footer/botones
+         - 1700px: techo razonable para 4K vertical */
+      --board-max: min(96vw, 1700px, 82vh);
+      width: var(--board-max);
+      height: var(--board-max);           /* cuadrado */
+      margin: 0 auto;
+      display: grid;
+      place-content: center;
+      gap: clamp(14px, 2vh, 36px);        /* más separación entre celdas */
+      /* Si tu sopa es N×N, fijalo aquí. Ej: 14 columnas:
+         grid-template-columns: repeat(14, 1fr); */
+    }
+  
+    .cell{
+      /* NUNCA fijes width en px; dejá que la grilla reparta el espacio */
+      aspect-ratio: 1 / 1;
+      width: 100%; height: auto;
+      display: grid; place-items: center;
+      border-radius: 20px; line-height: 1;
+  
+      /* Letras grandes de verdad */
+      font-size: clamp(2.6rem, 4.4vh, 5.6rem);
+    }
+  
+    /* Botones grandes y cómodos */
+    .bottom-buttons{
+      display: flex; flex-direction: column; align-items: center;
+      gap: 1.8vh; margin: 0 auto 1vh;
+    }
+    .reset-btn, .back-btn, .primary-btn{
+      min-width: min(82vw, 720px);
+      min-height: clamp(72px, 5.6vh, 140px);
+      font-size: clamp(1.6rem, 2.4vh, 3.8rem);
+      padding: 1.8vh 2.2vw; border-radius: 22px;
+    }
+  
+    /* Footer fijo abajo, discreto */
+    footer{
+      position: fixed; right: 2vw; bottom: 2vh; z-index: 10;
+      font-size: clamp(.9rem, 1.6vh, 3.4rem);
+    }
+    footer p{ padding: 1.2vh 1.4vw; border-radius: 14px; }
+  
+    .watermark{ position: fixed; left: 2vw; bottom: 2vh; z-index: 10; }
+    .watermark-logo{ height: clamp(32px, 3.4vh, 72px); }
+  
+    /* ---------- Modal grande y legible ---------- */
+    .mobile-instructions-modal{
+      position: fixed; inset: 0; z-index: 9999;
+      display: none;                           /* base: oculto */
+      align-items: center; justify-content: center;
+      padding: 4vh 4vw;
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(2px);
+    }
+    .mobile-instructions-modal.active{ display: flex; }
+  
+    .mobile-instructions-modal .modal-content{
+      width: min(92vw, 1400px);
+      max-width: 1400px;
+      padding: 5vh 4vw;
+      border-radius: 32px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.22);
+      text-align: center;
+    }
+    .mobile-instructions-modal h3{
+      font-size: clamp(2.6rem, 4vh, 5.2rem);
+      line-height: 1.12; margin: 0 0 2.2vh;
+    }
+    .mobile-instructions-modal p{
+      font-size: clamp(1.8rem, 3vh, 3.2rem);
+      margin: 0 0 2.8vh;
+    }
+    .mobile-instructions-modal .modal-close-btn{
+      font-size: clamp(1.6rem, 2.6vh, 3.2rem);
+      padding: 1.8vh 2.8vw;
+      min-height: clamp(72px, 5.8vh, 140px);
+      border-radius: 22px; cursor: pointer;
+    }
+
+    /* ---------- Modal de victoria adaptado para pantalla vertical grande ---------- */
+    .victory-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 6vh 4vw;
+      border-radius: 40px;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      z-index: 1000;
+      display: none;
+      width: 90vw;
+      max-width: 1800px;
+    }
+
+    .victory-message.show {
+      display: block;
+      animation: victoryPop 0.6s ease-out;
+    }
+
+    @keyframes victoryPop {
+      0% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .victory-title {
+      color: var(--verde-match);
+      font-size: clamp(4.5rem, 6vw, 7rem);
+      margin-bottom: 4vh;
+      font-weight: 900;
+      font-family: 'Gotham Rounded', 'Nunito Sans', sans-serif;
+    }
+
+    .victory-stats {
+      color: var(--secundario-oscuro);
+      font-size: clamp(2.8rem, 4vw, 5rem);
+      margin-bottom: 3vh;
+      line-height: 1.3;
+    }
+  }
+  

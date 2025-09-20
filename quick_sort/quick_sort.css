@@ -538,3 +538,121 @@ footer p {
     footer p { padding: 20px 150px; border-radius: 22px; }
   }
   
+
+  /* ---------- Responsive: 2160 x 3800 (pantalla 4K vertical) ---------- */
+@media (max-width: 2160px) and (min-height: 3800px) {
+
+    /* 1) Lienzo y ritmo vertical */
+    html, body { height: 100dvh; overflow: hidden; }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* header / contenido / botones */
+      align-items: center;
+      padding: 4vh 0;
+      padding-bottom: 10vh; /* reserva espacio para el footer fijo */
+    }
+  
+    /* 2) Header más grande */
+    .header { max-width: 1800px;  }
+    .title { font-size: clamp(4rem, 5.4vh, 7.2rem); margin-bottom: 2vh; }
+    .stats { gap: 3vh; margin-bottom: 2.2vh; }
+    .stat { min-width: 280px; padding: 2.6vh 3vw; border-radius: 26px; }
+    .stat-label { font-size: clamp(1.8rem, 2.4vh, 3.4rem); }
+    .stat-value { font-size: clamp(2.6rem, 3.2vh, 4.8rem); }
+  
+    /* 3) Contenedor del juego bien ancho y cómodo */
+    .game-container {
+      max-width: 1900px;
+      width: min(94vw, 1900px);
+      border-radius: 32px;
+      margin: 0 auto 3vh;
+    }
+  
+    /* 4) SEGMENTED CONTROL (categorías) — vertical scroll, se ve 1.5 categorías */
+    .segmented{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 10.5vh; /* suficiente para 1.5 categorías (ajustar según .segment) */
+      min-height: 0;
+      max-height: 10.5vh;
+      overflow-y: auto;
+      overflow-x: visible;
+      padding: 0.5vh 1.6vw;
+      gap: 1.4vh;
+      border-radius: 30px;
+      margin-bottom: 2.6vh;
+      background: rgba(255,255,255,.45);
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+      scrollbar-width: thin;
+      scrollbar-color: #bbb #eee;
+    }
+    .segmented::-webkit-scrollbar {
+      width: 12px;
+      background: #eee;
+      border-radius: 12px;
+    }
+    .segmented::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 12px;
+    }
+    .segment{
+      font-size: clamp(1.8rem, 2.8vh, 3.8rem);
+      padding: 1.4vh 1.8vw;
+      border-radius: 26px;
+      flex: 0 0 6vh; /* altura fija para que 1.5 se vean en 10.5vh */
+      margin: 0 auto;
+      width: 90%;
+      box-sizing: border-box;
+      /* Opcional: resalta la seleccionada */
+      /* transition: background .2s; */
+    }
+  
+    /* 5) Pool y chips (palabras) */
+    .pool{ padding: 2.6vh 2.4vw; border-radius: 26px; }
+    .chips{ gap: 2.2vh; }
+    .chip{
+      padding: 2.2vh 2.2vw;
+      font-size: clamp(2.2rem, 3.2vh, 4.2rem);
+      border-radius: 26px;
+    }
+  
+    /* 6) Botones de clasificar */
+    .classify-buttons{ gap: 2.4vh; margin-top: 2.4vh; flex-wrap: wrap; }
+    .btn{
+      min-height: clamp(96px, 6.4vh, 190px);
+      font-size: clamp(2.2rem, 3vh, 4rem);
+      padding: 2vh 3vw;
+      border-radius: 26px;
+    }
+  
+    /* 7) Feedback */
+    .feedback{ font-size: clamp(2rem, 2.6vh, 3.6rem); min-height: 64px; }
+  
+    /* 8) Botones naranjas inferiores — sin desbordes */
+    .bottom-buttons{
+      width: min(94vw, 1400px);   /* contenedor acotado */
+      display: flex;
+      flex-wrap: wrap;            /* que bajen a otra línea si hace falta */
+      justify-content: center;
+      gap: 2vh;
+    }
+    .reset-btn{
+      flex: 1 1 100%;             /* 1 por línea en vertical 4K */
+      max-width: 1000px;
+      font-size: clamp(2rem, 2.8vh, 3.8rem);
+      border-radius: 26px;
+    }
+  
+    /* 9) Footer fijo pero discreto (no pisa botones por el padding-bottom) */
+    footer{
+      position: fixed;
+      right: 3vw;
+      bottom: 2vh;
+      font-size: clamp(1.4rem, 2vh, 2.6rem);
+      z-index: 10;
+    }
+    footer p{ padding: 1.4vh 2vw; border-radius: 18px; }
+  }
+  
