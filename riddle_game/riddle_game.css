@@ -245,3 +245,51 @@
     footer p { padding: 20px 150px; border-radius: 24px; }
   }
   
+
+  /* ====== Watermark de fondo ====== */
+:root {
+  --wm-size: 1100px;       /* tamaño de la marca */
+  --wm-rotate: -22deg;     /* inclinación */
+  --wm-opacity: 0.14;      /* transparencia */
+}
+
+body {
+  position: relative; /* necesario para el pseudo-elemento */
+}
+
+body::before {
+  content: "";
+  position: fixed; /* fijo en pantalla */
+  top: 12vh;
+  left: calc(-0.25 * var(--wm-size)); /* lo empuja hacia la izquierda */
+  width: var(--wm-size);
+  height: var(--wm-size);
+  background: url("../statics/img/flor.png") no-repeat center / contain;
+  opacity: var(--wm-opacity);
+  transform: rotate(var(--wm-rotate));
+  pointer-events: none; /* no bloquea clicks */
+  z-index: 0; /* al fondo */
+}
+
+.container,
+footer {
+  position: relative;
+  z-index: 1; /* el contenido queda por encima */
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  :root { --wm-size: 780px; }
+  body::before {
+    top: 18vh;
+    left: calc(-0.35 * var(--wm-size));
+  }
+}
+
+@media (max-width: 600px) {
+  :root { --wm-size: 560px; }
+  body::before {
+    top: 24vh;
+    left: calc(-0.40 * var(--wm-size));
+  }
+}
